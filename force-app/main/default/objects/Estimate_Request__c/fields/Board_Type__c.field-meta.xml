@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Board_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Board Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SBS C1S</fullName>
+                <default>false</default>
+                <label>SBS C1S</label>
+            </value>
+            <value>
+                <fullName>SBS C2S</fullName>
+                <default>false</default>
+                <label>SBS C2S</label>
+            </value>
+            <value>
+                <fullName>SUS</fullName>
+                <default>false</default>
+                <label>SUS</label>
+            </value>
+            <value>
+                <fullName>CRB</fullName>
+                <default>false</default>
+                <label>CRB</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

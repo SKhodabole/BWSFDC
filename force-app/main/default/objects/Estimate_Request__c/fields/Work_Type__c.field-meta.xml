@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Work_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Work Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New/Existing Client</fullName>
+                <default>false</default>
+                <label>New/Existing Client</label>
+            </value>
+            <value>
+                <fullName>New Client</fullName>
+                <default>false</default>
+                <label>New Client</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Revise</fullName>
+                <default>false</default>
+                <label>Revise</label>
+            </value>
+            <value>
+                <fullName>General Analysis</fullName>
+                <default>false</default>
+                <label>General Analysis</label>
+            </value>
+            <value>
+                <fullName>Large Corp RFP</fullName>
+                <default>false</default>
+                <label>Large Corp RFP</label>
+            </value>
+            <value>
+                <fullName>Reprint</fullName>
+                <default>false</default>
+                <label>Reprint</label>
+            </value>
+            <value>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+                <label>Renewal</label>
+            </value>
+            <value>
+                <fullName>Contract Paper Impact</fullName>
+                <default>false</default>
+                <label>Contract Paper Impact</label>
+            </value>
+            <value>
+                <fullName>Addendum for Contract Billing</fullName>
+                <default>false</default>
+                <label>Addendum for Contract Billing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

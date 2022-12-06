@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Freight_additional_to__c</fullName>
+    <externalId>false</externalId>
+    <label>Freight</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>true</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>FOB</fullName>
+                <default>false</default>
+                <label>FOB</label>
+            </value>
+            <value>
+                <fullName>Local Delivery included</fullName>
+                <default>false</default>
+                <label>Local Delivery included</label>
+            </value>
+            <value>
+                <fullName>Mail</fullName>
+                <default>false</default>
+                <label>Mail</label>
+            </value>
+            <value>
+                <fullName>FOB Plant</fullName>
+                <default>false</default>
+                <label>FOB Plant</label>
+            </value>
+            <value>
+                <fullName>FOB Destination</fullName>
+                <default>false</default>
+                <label>FOB Destination</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

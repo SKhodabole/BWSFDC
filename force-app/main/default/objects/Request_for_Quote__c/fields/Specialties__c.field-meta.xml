@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Specialties__c</fullName>
+    <externalId>false</externalId>
+    <label>Specialties</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Emboss</fullName>
+                <default>false</default>
+                <label>Emboss</label>
+            </value>
+            <value>
+                <fullName>Hot Stamp</fullName>
+                <default>false</default>
+                <label>Hot Stamp</label>
+            </value>
+            <value>
+                <fullName>Cold Foil</fullName>
+                <default>false</default>
+                <label>Cold Foil</label>
+            </value>
+            <value>
+                <fullName>Re-insertion</fullName>
+                <default>false</default>
+                <label>Re-insertion</label>
+            </value>
+            <value>
+                <fullName>JeftFX</fullName>
+                <default>false</default>
+                <label>JeftFX</label>
+            </value>
+            <value>
+                <fullName>Variable Data</fullName>
+                <default>false</default>
+                <label>Variable Data</label>
+            </value>
+            <value>
+                <fullName>Turnbar Required (printing both sides of the material)</fullName>
+                <default>false</default>
+                <label>Turnbar Required (printing both sides of the material)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

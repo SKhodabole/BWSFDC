@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_email</name>
+        <label>Send email</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <actionName>Opportunity.Global_International_Opportunity_Notification</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>56.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Global/International Notification {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Global/International Notification</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Send_email</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>AND({!$Record.International_Opportunity__c}=true, {!$Record.Owner.Profile.Name}&lt;&gt; &apos;Westrock User&apos; , OR({!$Record.RecordType.DeveloperName}= &apos;Cenveo&apos; , {!$Record.RecordType.DeveloperName}=&apos;Custom_Label_Quote_Follow_Up&apos;))</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

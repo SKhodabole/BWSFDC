@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Film_Base__c</fullName>
+    <externalId>false</externalId>
+    <label>Film Base</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>White Vinyl</fullName>
+                <default>false</default>
+                <label>White Vinyl</label>
+            </value>
+            <value>
+                <fullName>Clear Vinyl</fullName>
+                <default>false</default>
+                <label>Clear Vinyl</label>
+            </value>
+            <value>
+                <fullName>Yellow Vinyl</fullName>
+                <default>false</default>
+                <label>Yellow Vinyl</label>
+            </value>
+            <value>
+                <fullName>White Static Vinyl</fullName>
+                <default>false</default>
+                <label>White Static Vinyl</label>
+            </value>
+            <value>
+                <fullName>Clear Static Vinyl</fullName>
+                <default>false</default>
+                <label>Clear Static Vinyl</label>
+            </value>
+            <value>
+                <fullName>White Vinyl High Tack</fullName>
+                <default>false</default>
+                <label>White Vinyl High Tack</label>
+            </value>
+            <value>
+                <fullName>Clear Vinyl High Tack</fullName>
+                <default>false</default>
+                <label>Clear Vinyl High Tack</label>
+            </value>
+            <value>
+                <fullName>White Polypropylene</fullName>
+                <default>false</default>
+                <label>White Polypropylene</label>
+            </value>
+            <value>
+                <fullName>Clear Polypropylene</fullName>
+                <default>false</default>
+                <label>Clear Polypropylene</label>
+            </value>
+            <value>
+                <fullName>White Polypropylene Removable</fullName>
+                <default>false</default>
+                <label>White Polypropylene Removable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

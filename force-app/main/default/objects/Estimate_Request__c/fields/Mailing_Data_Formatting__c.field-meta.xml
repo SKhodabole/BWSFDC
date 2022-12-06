@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mailing_Data_Formatting__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(INCLUDES(Mailing_Data__c,&quot;Base Data Service&quot;), &quot;Base Data Service, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES(Mailing_Data__c,&quot;NCOA&quot;), &quot;NCOA, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES(Mailing_Data__c,&quot;Merge / Perge&quot;), &quot;Merge / Perge, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES(Mailing_Data__c,&quot;Tracking / Plant Code&quot;), &quot;Tracking / Plant Code&quot;,NULL)+&apos;&apos;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Mailing Data Formatting</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

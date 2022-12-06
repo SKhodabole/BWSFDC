@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Paper_Base__c</fullName>
+    <externalId>false</externalId>
+    <label>Paper Base</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>White Gloss</fullName>
+                <default>false</default>
+                <label>White Gloss</label>
+            </value>
+            <value>
+                <fullName>White Gloss Removable</fullName>
+                <default>false</default>
+                <label>White Gloss Removable</label>
+            </value>
+            <value>
+                <fullName>White Litho</fullName>
+                <default>false</default>
+                <label>White Litho</label>
+            </value>
+            <value>
+                <fullName>White Litho Removable</fullName>
+                <default>false</default>
+                <label>White Litho Removable</label>
+            </value>
+            <value>
+                <fullName>Shiny Silver Foil</fullName>
+                <default>false</default>
+                <label>Shiny Silver Foil</label>
+            </value>
+            <value>
+                <fullName>Dull Silver Foil</fullName>
+                <default>false</default>
+                <label>Dull Silver Foil</label>
+            </value>
+            <value>
+                <fullName>Shiny Gold Foil</fullName>
+                <default>false</default>
+                <label>Shiny Gold Foil</label>
+            </value>
+            <value>
+                <fullName>Dull Gold Foil</fullName>
+                <default>false</default>
+                <label>Dull Gold Foil</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

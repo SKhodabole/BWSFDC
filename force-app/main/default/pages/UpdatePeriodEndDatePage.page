@@ -1,0 +1,5 @@
+<apex:page controller="InvokeUpdatePeriodEndDate">
+<apex:form >
+	<apex:commandButton action="{!invoke}" value="Start update" />
+</apex:form>
+</apex:page>

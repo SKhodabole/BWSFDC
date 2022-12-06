@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Business_Unit__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Assembly/Fulfillment</fullName>
+                <default>false</default>
+                <label>Assembly/Fulfillment</label>
+            </value>
+            <value>
+                <fullName>Blister Card</fullName>
+                <default>false</default>
+                <label>Blister Card</label>
+            </value>
+            <value>
+                <fullName>Commercial Print</fullName>
+                <default>false</default>
+                <label>Commercial Print</label>
+            </value>
+            <value>
+                <fullName>Custom Label</fullName>
+                <default>false</default>
+                <label>Custom Label</label>
+            </value>
+            <value>
+                <fullName>Envelope</fullName>
+                <default>false</default>
+                <label>Envelope</label>
+            </value>
+            <value>
+                <fullName>Folding Carton</fullName>
+                <default>false</default>
+                <label>Folding Carton</label>
+            </value>
+            <value>
+                <fullName>Nashua Labels</fullName>
+                <default>false</default>
+                <label>Nashua Labels</label>
+            </value>
+            <value>
+                <fullName>POS</fullName>
+                <default>false</default>
+                <label>POS</label>
+            </value>
+            <value>
+                <fullName>Publisher Services</fullName>
+                <default>false</default>
+                <label>Publisher Services</label>
+            </value>
+            <value>
+                <fullName>RFP -  Bid Custom Label - Acclaim</fullName>
+                <default>false</default>
+                <label>RFP -  Bid Custom Label - Acclaim</label>
+            </value>
+            <value>
+                <fullName>RFP - Bid Nashua Labels</fullName>
+                <default>false</default>
+                <label>RFP - Bid Nashua Labels</label>
+            </value>
+            <value>
+                <fullName>RFP - Bid Packaging</fullName>
+                <default>false</default>
+                <label>RFP - Bid Packaging</label>
+            </value>
+            <value>
+                <fullName>RFP - Bid POS</fullName>
+                <default>false</default>
+                <label>RFP - Bid POS</label>
+            </value>
+            <value>
+                <fullName>Rx Labels</fullName>
+                <default>false</default>
+                <label>Rx Labels</label>
+            </value>
+            <value>
+                <fullName>Shrink Sleeve</fullName>
+                <default>false</default>
+                <label>Shrink Sleeve</label>
+            </value>
+            <value>
+                <fullName>RFP - Shrink Sleeve</fullName>
+                <default>false</default>
+                <label>RFP - Shrink Sleeve</label>
+            </value>
+            <value>
+                <fullName>Coated Products</fullName>
+                <default>false</default>
+                <label>Coated Products</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Commercial Print</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Assembly/Fulfillment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Print</controllingFieldValue>
+            <valueName>Commercial Print</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Print</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Publisher Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Envelope</controllingFieldValue>
+            <valueName>Envelope</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Labels</controllingFieldValue>
+            <valueName>Custom Label</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Labels</controllingFieldValue>
+            <valueName>Nashua Labels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Labels</controllingFieldValue>
+            <valueName>RFP -  Bid Custom Label - Acclaim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Labels</controllingFieldValue>
+            <valueName>RFP - Bid Nashua Labels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Labels</controllingFieldValue>
+            <valueName>Rx Labels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nashua Coated</controllingFieldValue>
+            <valueName>Coated Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packaging</controllingFieldValue>
+            <valueName>Blister Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packaging</controllingFieldValue>
+            <valueName>Folding Carton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packaging</controllingFieldValue>
+            <valueName>RFP - Bid Packaging</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POS</controllingFieldValue>
+            <valueName>POS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POS</controllingFieldValue>
+            <valueName>RFP - Bid POS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shrink Sleeve</controllingFieldValue>
+            <valueName>Shrink Sleeve</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shrink Sleeve</controllingFieldValue>
+            <valueName>RFP - Shrink Sleeve</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

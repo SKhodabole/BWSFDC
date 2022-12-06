@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VentHoles</fullName>
+    <active>true</active>
+    <description>VentHoles Other is required</description>
+    <errorConditionFormula>AND(OR(RecordType.DeveloperName = &apos;Flexible_Packaging_Converted_3_Side_Seal&apos;,
+RecordType.DeveloperName = &apos;Flexible_Packaging_Converted_Stand_Up_Pouch&apos;),
+ISPICKVAL( VentHoles__c, &apos;Other&apos;), 
+ISBLANK(VentHoles_Other__c))</errorConditionFormula>
+    <errorDisplayField>VentHoles_Other__c</errorDisplayField>
+    <errorMessage>VentHoles Other is required</errorMessage>
+</ValidationRule>

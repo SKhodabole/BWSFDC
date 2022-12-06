@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Furnished__c</fullName>
+    <externalId>false</externalId>
+    <label>Pre Press Furnished</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Electronic file with all elements in place, CG to rip and trap</fullName>
+                <default>false</default>
+                <label>Electronic file with all elements in place, CG to rip and trap</label>
+            </value>
+            <value>
+                <fullName>Cenveo to rip and trap</fullName>
+                <default>false</default>
+                <label>Cenveo to rip and trap</label>
+            </value>
+            <value>
+                <fullName>Hi Resolution PDF ready to Print</fullName>
+                <default>false</default>
+                <label>Hi Resolution PDF ready to Print</label>
+            </value>
+            <value>
+                <fullName>Standing files for Exact reprint</fullName>
+                <default>false</default>
+                <label>Standing files for Exact reprint</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

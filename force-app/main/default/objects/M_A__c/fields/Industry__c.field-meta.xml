@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry__c</fullName>
+    <externalId>false</externalId>
+    <label>Industry</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business Services</fullName>
+                <default>false</default>
+                <label>Business Services</label>
+            </value>
+            <value>
+                <fullName>Consumer Retail</fullName>
+                <default>false</default>
+                <label>Consumer Retail</label>
+            </value>
+            <value>
+                <fullName>Distributor</fullName>
+                <default>false</default>
+                <label>Distributor</label>
+            </value>
+            <value>
+                <fullName>Financial</fullName>
+                <default>false</default>
+                <label>Financial</label>
+            </value>
+            <value>
+                <fullName>Food &amp; Beverage</fullName>
+                <default>false</default>
+                <label>Food &amp; Beverage</label>
+            </value>
+            <value>
+                <fullName>Government</fullName>
+                <default>false</default>
+                <label>Government</label>
+            </value>
+            <value>
+                <fullName>Industrial/Manufacturing</fullName>
+                <default>false</default>
+                <label>Industrial/Manufacturing</label>
+            </value>
+            <value>
+                <fullName>IT/Telecom</fullName>
+                <default>false</default>
+                <label>IT/Telecom</label>
+            </value>
+            <value>
+                <fullName>Pharma/Healthcare</fullName>
+                <default>false</default>
+                <label>Pharma/Healthcare</label>
+            </value>
+            <value>
+                <fullName>Printing</fullName>
+                <default>false</default>
+                <label>Printing</label>
+            </value>
+            <value>
+                <fullName>Travel/Leisure</fullName>
+                <default>false</default>
+                <label>Travel/Leisure</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

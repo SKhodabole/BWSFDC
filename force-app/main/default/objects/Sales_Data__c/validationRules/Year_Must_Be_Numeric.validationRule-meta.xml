@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Year_Must_Be_Numeric</fullName>
+    <active>false</active>
+    <errorConditionFormula>NOT(ISNUMBER( Year__c ) )</errorConditionFormula>
+    <errorDisplayField>Year__c</errorDisplayField>
+    <errorMessage>Year must be numeric.</errorMessage>
+</ValidationRule>

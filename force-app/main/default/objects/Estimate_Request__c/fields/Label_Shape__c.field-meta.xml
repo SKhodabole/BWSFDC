@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Label_Shape__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select Shape Type</inlineHelpText>
+    <label>Label Shape</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Square Corner Rectangle/Square</fullName>
+                <default>false</default>
+                <label>Square Corner Rectangle/Square</label>
+            </value>
+            <value>
+                <fullName>Round Corner Rectangle/Square</fullName>
+                <default>false</default>
+                <label>Round Corner Rectangle/Square</label>
+            </value>
+            <value>
+                <fullName>Circle</fullName>
+                <default>false</default>
+                <label>Circle</label>
+            </value>
+            <value>
+                <fullName>Oval</fullName>
+                <default>false</default>
+                <label>Oval</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

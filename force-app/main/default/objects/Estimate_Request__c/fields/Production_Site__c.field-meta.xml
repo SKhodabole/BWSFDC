@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Production_Site__c</fullName>
+    <externalId>false</externalId>
+    <label>Estimating Location</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Amarillo, TX</fullName>
+                <default>false</default>
+                <label>Amarillo, TX</label>
+            </value>
+            <value>
+                <fullName>Los Angeles, CA</fullName>
+                <default>false</default>
+                <label>Los Angeles, CA</label>
+            </value>
+            <value>
+                <fullName>Portland, OR</fullName>
+                <default>false</default>
+                <label>Portland, OR</label>
+            </value>
+            <value>
+                <fullName>San Antonio, TX</fullName>
+                <default>false</default>
+                <label>San Antonio, TX</label>
+            </value>
+            <value>
+                <fullName>Seattle, WA</fullName>
+                <default>false</default>
+                <label>Seattle, WA</label>
+            </value>
+            <value>
+                <fullName>St. Louis, MO</fullName>
+                <default>true</default>
+                <label>St. Louis, MO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

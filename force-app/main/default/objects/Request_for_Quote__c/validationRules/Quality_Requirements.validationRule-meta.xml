@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quality_Requirements</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL(Quality_Requirements__c , &apos;Other&apos;), ISBLANK( Other_Quality_Requirements__c))</errorConditionFormula>
+    <errorDisplayField>Other_Finish__c</errorDisplayField>
+    <errorMessage>Quality Requirements Other is required.</errorMessage>
+</ValidationRule>

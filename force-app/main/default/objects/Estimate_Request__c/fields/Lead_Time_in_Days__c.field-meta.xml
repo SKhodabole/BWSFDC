@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Time_in_Days__c</fullName>
+    <defaultValue>15</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the number of days for the expected lead time for product to be manufactured</inlineHelpText>
+    <label>Lead Time (in Days)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

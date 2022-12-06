@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Compliance_Regulation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR( RecordType.DeveloperName = &apos;Flexible_Packaging_Converted_3_Side_Seal&apos;, RecordType.DeveloperName = &apos;Flexible_Packaging_Converted_Other&apos;, RecordType.DeveloperName = &apos;Flexible_Packaging_Converted_Pillow_Pouch&apos;, RecordType.DeveloperName = &apos;Flexible_Packaging_Converted_Stand_Up_Pouch&apos;), ISPICKVAL( Compliance_Regulations__c , &apos;Other&apos;), ISBLANK( Other_Compliance_Regulations__c ))</errorConditionFormula>
+    <errorDisplayField>Other_Compliance_Regulations__c</errorDisplayField>
+    <errorMessage>Compliance Regulation Other is required.</errorMessage>
+</ValidationRule>

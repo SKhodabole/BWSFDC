@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mailing_Addressing__c</fullName>
+    <externalId>false</externalId>
+    <label>Mailing Addressing</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ink jet address / 1 inch Prt Head</fullName>
+                <default>false</default>
+                <label>Ink jet address / 1 inch Prt Head</label>
+            </value>
+            <value>
+                <fullName>Multi-head ink jet / 4 inch Prt Head</fullName>
+                <default>false</default>
+                <label>Multi-head ink jet / 4 inch Prt Head</label>
+            </value>
+            <value>
+                <fullName>Apply indica with ink jet</fullName>
+                <default>false</default>
+                <label>Apply indica with ink jet</label>
+            </value>
+            <value>
+                <fullName>Ink jet message lines</fullName>
+                <default>false</default>
+                <label>Ink jet message lines</label>
+            </value>
+            <value>
+                <fullName>Piece will be glued closed in bindery</fullName>
+                <default>false</default>
+                <label>Piece will be glued closed in bindery</label>
+            </value>
+            <value>
+                <fullName>Tabbing - 1 tab</fullName>
+                <default>false</default>
+                <label>Tabbing - 1 tab</label>
+            </value>
+            <value>
+                <fullName>Tabbing - 2 tabs</fullName>
+                <default>false</default>
+                <label>Tabbing - 2 tabs</label>
+            </value>
+            <value>
+                <fullName>Tabbing - 3 tabs</fullName>
+                <default>false</default>
+                <label>Tabbing - 3 tabs</label>
+            </value>
+            <value>
+                <fullName>Slim Jim format - 3 tabs x 1.5inch</fullName>
+                <default>false</default>
+                <label>Slim Jim format - 3 tabs x 1.5inch</label>
+            </value>
+            <value>
+                <fullName>White tabs</fullName>
+                <default>false</default>
+                <label>White tabs</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amortize_Version_Changes_into_Price__c</fullName>
+    <externalId>false</externalId>
+    <label>Amortize Version Changes into Price</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Y_N</valueSetName>
+    </valueSet>
+</CustomField>

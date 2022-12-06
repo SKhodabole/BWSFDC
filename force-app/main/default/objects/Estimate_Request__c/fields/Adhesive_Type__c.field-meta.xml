@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adhesive_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Adhesive Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>All Temperature</fullName>
+                <default>false</default>
+                <label>All Temperature</label>
+            </value>
+            <value>
+                <fullName>High Tack</fullName>
+                <default>false</default>
+                <label>High Tack</label>
+            </value>
+            <value>
+                <fullName>Opaque</fullName>
+                <default>false</default>
+                <label>Opaque</label>
+            </value>
+            <value>
+                <fullName>Permanent</fullName>
+                <default>true</default>
+                <label>Permanent</label>
+            </value>
+            <value>
+                <fullName>Removable</fullName>
+                <default>false</default>
+                <label>Removable</label>
+            </value>
+            <value>
+                <fullName>Repositionable</fullName>
+                <default>false</default>
+                <label>Repositionable</label>
+            </value>
+            <value>
+                <fullName>Freezer</fullName>
+                <default>false</default>
+                <label>Freezer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

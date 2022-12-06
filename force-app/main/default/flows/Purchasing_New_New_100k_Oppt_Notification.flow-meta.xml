@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Purchasing_New_New_100k</name>
+        <label>Purchasing New New 100k</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <actionName>Opportunity.Purchasing_New_New_100k_Opportunity_Notification</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>56.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Purchasing New New 100k Oppt Notification {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Purchasing New New 100k Oppt Notification</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Purchasing_New_New_100k</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>AND(ISPICKVAL({!$Record.Type}, &apos;New Customer - New Business&apos;), {!$Record.Amount}&gt;=100000, {!$User.Division}= &apos;Labels &amp; Packaging&apos;, NOT(ISPICKVAL({!$Record.StageName}, &apos;Introduction&apos;)),OR({!$Record.RecordType.DeveloperName}=&apos;Cenveo&apos;, {!$Record.RecordType.DeveloperName}=&apos;Custom_Label_Quote_Follow_Up&apos;))</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

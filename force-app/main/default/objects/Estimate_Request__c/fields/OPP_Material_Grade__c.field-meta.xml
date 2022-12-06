@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OPP_Material_Grade__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Alternate Material grade - Please enter the material</inlineHelpText>
+    <label>Material Grade - OPP</label>
+    <length>30</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

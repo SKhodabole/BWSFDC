@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Contact_Converted_Lead</name>
+        <label>Contact Converted Lead</label>
+        <locationX>308</locationX>
+        <locationY>288</locationY>
+        <actionName>NewTask</actionName>
+        <actionType>quickAction</actionType>
+        <connector>
+            <targetReference>Lead_Followup_mail</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>OwnerId</name>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>contextId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>Subject</name>
+            <value>
+                <stringValue>Contact Converted Lead (Lead Gen) - Due in 24hrs</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Lead_Followup_mail</name>
+        <label>Lead Followup mail</label>
+        <locationX>308</locationX>
+        <locationY>408</locationY>
+        <actionName>Lead.Lead_Followup_Rep_and_Manager</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>56.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Sales Rep Tasks {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Sales Rep Tasks</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>AND(OR({!$Record.RecordType.DeveloperName}=&apos;Inside_Sales&apos;, {!$Record.RecordType.DeveloperName}=&apos;Master&apos;), {!$Record.Sales_Rep_Initial_Tasks__c}=true, {!$Record.Cancel_Workflow__c}=false)</filterFormula>
+        <object>Lead</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>Contact_Converted_Lead_Lead_Gen_Due_in_24hrs</name>
+            <connector>
+                <targetReference>Contact_Converted_Lead</targetReference>
+            </connector>
+            <label>Contact Converted Lead (Lead Gen) - Due in 24hrs</label>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <recordField>CreatedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

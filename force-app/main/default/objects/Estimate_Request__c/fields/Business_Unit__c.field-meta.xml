@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Unit__c</fullName>
+    <description>Name of Business Unit</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the Business Unit that this Estimate is related to.</inlineHelpText>
+    <label>Business Unit</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Commercial Print</fullName>
+                <default>false</default>
+                <label>Commercial Print</label>
+            </value>
+            <value>
+                <fullName>Envelope</fullName>
+                <default>false</default>
+                <label>Envelope</label>
+            </value>
+            <value>
+                <fullName>Labels</fullName>
+                <default>false</default>
+                <label>Labels</label>
+            </value>
+            <value>
+                <fullName>Nashua Coated</fullName>
+                <default>false</default>
+                <label>Nashua Coated</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Packaging</fullName>
+                <default>false</default>
+                <label>Packaging</label>
+            </value>
+            <value>
+                <fullName>POS</fullName>
+                <default>false</default>
+                <label>POS</label>
+            </value>
+            <value>
+                <fullName>Shrink Sleeve</fullName>
+                <default>false</default>
+                <label>Shrink Sleeve</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

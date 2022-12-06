@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mailing_Inserting__c</fullName>
+    <externalId>false</externalId>
+    <label>Mailing Inserting</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Envelope size</fullName>
+                <default>false</default>
+                <label>Envelope size</label>
+            </value>
+            <value>
+                <fullName># Inserts per package</fullName>
+                <default>false</default>
+                <label># Inserts per package</label>
+            </value>
+            <value>
+                <fullName>Insert into booklet envelope</fullName>
+                <default>false</default>
+                <label>Insert into booklet envelope</label>
+            </value>
+            <value>
+                <fullName>Insert into catalog envelope</fullName>
+                <default>false</default>
+                <label>Insert into catalog envelope</label>
+            </value>
+            <value>
+                <fullName>Nest into another piece</fullName>
+                <default>false</default>
+                <label>Nest into another piece</label>
+            </value>
+            <value>
+                <fullName>Polybag / Polywrap</fullName>
+                <default>false</default>
+                <label>Polybag / Polywrap</label>
+            </value>
+            <value>
+                <fullName>Shrinkwrap</fullName>
+                <default>false</default>
+                <label>Shrinkwrap</label>
+            </value>
+            <value>
+                <fullName>Match 1 insert to address</fullName>
+                <default>false</default>
+                <label>Match 1 insert to address</label>
+            </value>
+            <value>
+                <fullName>Match 2 insert to address</fullName>
+                <default>false</default>
+                <label>Match 2 insert to address</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

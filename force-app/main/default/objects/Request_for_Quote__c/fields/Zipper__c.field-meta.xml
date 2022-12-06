@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zipper__c</fullName>
+    <externalId>false</externalId>
+    <label>Zipper</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Standard 10mm PTC</fullName>
+                <default>false</default>
+                <label>Standard 10mm PTC</label>
+            </value>
+            <value>
+                <fullName>Child Resistant</fullName>
+                <default>false</default>
+                <label>Child Resistant</label>
+            </value>
+            <value>
+                <fullName>Powder Proof</fullName>
+                <default>false</default>
+                <label>Powder Proof</label>
+            </value>
+            <value>
+                <fullName>Wide-Flange</fullName>
+                <default>false</default>
+                <label>Wide-Flange</label>
+            </value>
+            <value>
+                <fullName>Linear Tear</fullName>
+                <default>false</default>
+                <label>Linear Tear</label>
+            </value>
+            <value>
+                <fullName>Pocket Zipper</fullName>
+                <default>false</default>
+                <label>Pocket Zipper</label>
+            </value>
+            <value>
+                <fullName>Audible Tactile</fullName>
+                <default>false</default>
+                <label>Audible Tactile</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

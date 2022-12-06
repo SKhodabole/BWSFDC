@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Opportunity</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Create Opportunity</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>{!URLFOR( $Action.Opportunity.New ,   Opportunity.Id  , ([RecordType=&apos;012d0000000OrW7&apos;,opp7= ( Estimate_Request__c.Qty_1__c *   Estimate_Request__c.Sell_Price_Qty_1__c )  , opp4_lkid= Estimate_Request__c.AccountId__c]), true)}&amp;opp3=x&amp;00Nd0000006jQda={!Estimate_Request__c.Product_Type__c}&amp;&amp;opp9={!TODAY() + 90}&amp;=&amp;opp11=Discovery&amp;opp5=New Business&amp;opp14={!Estimate_Request__c.Name}&amp;retURL={!Estimate_Request__c.Id}</url>
+</WebLink>

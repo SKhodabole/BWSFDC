@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clone_Estimate</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Clone Estimate</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>https://na14.salesforce.com/{!Estimate_Request__c.Id}/e?clone=1&amp;00Nd0000004pgy5=&quot;&quot;&amp;00Nd0000004pgzb=&quot;&quot;&amp;00Nd0000004pgzR=&quot;Draft&quot;&amp;00Nd0000006jcbV=0&amp;00Nd0000006jcbp=0&amp;00Nd0000006jcbW=0&amp;00Nd0000006jcbu=0&amp;00Nd0000006jcbz=0</url>
+</WebLink>

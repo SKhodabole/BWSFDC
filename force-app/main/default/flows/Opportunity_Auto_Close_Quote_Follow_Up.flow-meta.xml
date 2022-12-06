@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity Auto Close - Quote Follow Up {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity Auto Close - Quote Follow Up</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Stage</name>
+        <label>Update Stage</label>
+        <locationX>308</locationX>
+        <locationY>288</locationY>
+        <inputAssignments>
+            <field>StageName</field>
+            <value>
+                <stringValue>Closed Dropped</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterFormula>AND(OR({!$Record.RecordType.DeveloperName}=&apos;Custom_Label_Quote_Follow_Up&apos;,{!$Record.RecordType.DeveloperName}=&apos;Cenveo&apos;),{!$Record.IsClosed}=false)</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>X5_Days_After_Opportunity_Close_Date</name>
+            <connector>
+                <targetReference>Update_Stage</targetReference>
+            </connector>
+            <label>5 Days After Opportunity: Close Date</label>
+            <offsetNumber>5</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <recordField>CloseDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

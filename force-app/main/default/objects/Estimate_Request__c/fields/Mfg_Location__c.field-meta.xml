@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mfg_Location__c</fullName>
+    <externalId>false</externalId>
+    <label>Mfg Location</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Charlotte</fullName>
+                <default>false</default>
+                <label>Charlotte</label>
+            </value>
+            <value>
+                <fullName>Jacksonville</fullName>
+                <default>false</default>
+                <label>Jacksonville</label>
+            </value>
+            <value>
+                <fullName>Portland</fullName>
+                <default>false</default>
+                <label>Portland</label>
+            </value>
+            <value>
+                <fullName>Dominican Republic</fullName>
+                <default>false</default>
+                <label>Dominican Republic</label>
+            </value>
+            <value>
+                <fullName>Toronto</fullName>
+                <default>false</default>
+                <label>Toronto</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

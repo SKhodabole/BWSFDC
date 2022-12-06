@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mailing_Addressing_Formatting__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(INCLUDES( Mailing_Addressing__c,&quot;Ink jet address / 1 inch Prt Head&quot;), &quot;Ink jet address / 1 inch Prt Head, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES( Mailing_Addressing__c,&quot;Multi-head ink jet / 4 inch Prt Head&quot;), &quot;Multi-head ink jet / 4 inch Prt Head, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES( Mailing_Addressing__c,&quot;Apply indica with ink jet&quot;), &quot;Apply indica with ink jet, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES( Mailing_Addressing__c,&quot;Ink jet message lines&quot;), &quot;Ink jet message lines, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES( Mailing_Addressing__c,&quot;Piece will be glued closed in bindery&quot;), &quot;Piece will be glued closed in bindery, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES( Mailing_Addressing__c,&quot;Tabbing - 1 tab&quot;), &quot;Tabbing - 1 tab, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES( Mailing_Addressing__c,&quot;Tabbing - 2 tabs&quot;), &quot;Tabbing - 2 tabs, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES( Mailing_Addressing__c,&quot;Tabbing - 3 tabs&quot;), &quot;Tabbing - 3 tabs, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES( Mailing_Addressing__c,&quot;Slim Jim format - 3 tabs x 1.5inch&quot;), &quot;Slim Jim format - 3 tabs x 1.5inch &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES( Mailing_Addressing__c,&quot;White tabs&quot;), &quot;White tabs&quot;,NULL)+&apos;&apos;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Mailing Addressing Formatting</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

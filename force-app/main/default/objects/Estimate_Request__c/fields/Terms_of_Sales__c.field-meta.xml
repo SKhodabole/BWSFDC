@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Terms_of_Sales__c</fullName>
+    <externalId>false</externalId>
+    <label>Terms of Sales</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Net, cash, 30 days from date of invoice on approved credit.</fullName>
+                <default>false</default>
+                <label>Net, cash, 30 days from date of invoice on approved credit.</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

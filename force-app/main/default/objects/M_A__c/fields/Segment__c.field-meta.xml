@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment__c</fullName>
+    <externalId>false</externalId>
+    <formula>If( MA_Calculation_WF__c &gt;80,&quot;A&quot;,
+If(and(MA_Calculation_WF__c&gt;=60,Revenue__c&lt;80),&quot;B&quot;,
+If(and(MA_Calculation_WF__c&gt;=40,Revenue__c&lt;60),&quot;C&quot;,
+If(MA_Calculation_WF__c&lt;40,&quot;D&quot;, &quot;F&quot;))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Segment</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

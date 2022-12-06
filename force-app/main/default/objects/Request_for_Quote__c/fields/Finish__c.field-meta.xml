@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Finish__c</fullName>
+    <externalId>false</externalId>
+    <label>Finish</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Gloss UV</fullName>
+                <default>false</default>
+                <label>Gloss UV</label>
+            </value>
+            <value>
+                <fullName>Gloss Lam</fullName>
+                <default>false</default>
+                <label>Gloss Lam</label>
+            </value>
+            <value>
+                <fullName>Imprintable Varnish</fullName>
+                <default>false</default>
+                <label>Imprintable Varnish</label>
+            </value>
+            <value>
+                <fullName>Mar resistant</fullName>
+                <default>false</default>
+                <label>Mar resistant</label>
+            </value>
+            <value>
+                <fullName>Matte Lam</fullName>
+                <default>false</default>
+                <label>Matte Lam</label>
+            </value>
+            <value>
+                <fullName>Matte UV</fullName>
+                <default>false</default>
+                <label>Matte UV</label>
+            </value>
+            <value>
+                <fullName>Soft Touch Varnish</fullName>
+                <default>false</default>
+                <label>Soft Touch Varnish</label>
+            </value>
+            <value>
+                <fullName>Soft Touch Laminate</fullName>
+                <default>false</default>
+                <label>Soft Touch Laminate</label>
+            </value>
+            <value>
+                <fullName>Satin Varnish</fullName>
+                <default>false</default>
+                <label>Satin Varnish</label>
+            </value>
+            <value>
+                <fullName>Thermal Transfer Printable Lam. (Gloss = Standard)</fullName>
+                <default>false</default>
+                <label>Thermal Transfer Printable Lam. (Gloss = Standard)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Slip Varnish</fullName>
+                <default>false</default>
+                <label>Slip Varnish</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

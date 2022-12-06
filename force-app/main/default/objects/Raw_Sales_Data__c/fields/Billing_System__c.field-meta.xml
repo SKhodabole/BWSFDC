@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_System__c</fullName>
+    <externalId>false</externalId>
+    <label>Business Unit Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acclaim</fullName>
+                <default>false</default>
+                <label>Acclaim</label>
+            </value>
+            <value>
+                <fullName>Commercial Print</fullName>
+                <default>false</default>
+                <label>Commercial Print</label>
+            </value>
+            <value>
+                <fullName>DLI</fullName>
+                <default>false</default>
+                <label>DLI</label>
+            </value>
+            <value>
+                <fullName>Envelope</fullName>
+                <default>false</default>
+                <label>Envelope</label>
+            </value>
+            <value>
+                <fullName>Express Labels</fullName>
+                <default>false</default>
+                <label>Express Labels</label>
+            </value>
+            <value>
+                <fullName>Labels &amp; Packaging</fullName>
+                <default>false</default>
+                <label>Labels &amp; Packaging</label>
+            </value>
+            <value>
+                <fullName>Lancer</fullName>
+                <default>false</default>
+                <label>Lancer</label>
+            </value>
+            <value>
+                <fullName>Lightning Labels</fullName>
+                <default>false</default>
+                <label>Lightning Labels</label>
+            </value>
+            <value>
+                <fullName>Maverick Label</fullName>
+                <default>false</default>
+                <label>Maverick Label</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

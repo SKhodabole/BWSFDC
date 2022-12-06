@@ -1,0 +1,462 @@
+<!--
+    Visual for page to show Sales Data Upload Summary
+-->
+<apex:page id="pageId" controller="SalesDataUploadSummaryController" TabStyle="Sales_Data__c">
+    <apex:pageMessages id="pgmsgId"/>
+    <c:LoadingComponent />
+    
+    <!--Include JQuery File-->
+    <script type="text/javascript" language="Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <!--Include JQuery UI File-->
+    <script type="text/javascript" language="Javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
+    
+    <style>
+        .headercolumnstyle{
+            text-align: right;
+        }
+        
+        .container{
+           overflow:auto;  
+           max-height: 311px;  
+        }
+    </style>
+
+    <script>
+        var recordProceed = false;
+        function createMapping(name, type){
+            $("#dialogBoxDiv").dialog({
+                width: 500,
+                modal: true,
+                resizable: false,
+                draggable: false, 
+            });
+            
+            document.getElementById('pageId:formId:pageBlockId:modalPbId:modalPbsId:typeid').value = type;
+            document.getElementById('pageId:formId:pageBlockId:modalPbId:modalPbsId:mappednameid').value = name;
+            document.getElementById('pageId:formId:pageBlockId:modalPbId:modalPbsId:sfdcnameid').value = '';
+        }
+        
+        function saveMapping(){
+            var bs = document.getElementById('pageId:formId:pageBlockId:modalPbId:modalPbsId:bsid').value;
+            var type = document.getElementById('pageId:formId:pageBlockId:modalPbId:modalPbsId:typeid').value;
+            var sfdcName = document.getElementById('pageId:formId:pageBlockId:modalPbId:modalPbsId:sfdcnameid').value;
+            var mappedName = document.getElementById('pageId:formId:pageBlockId:modalPbId:modalPbsId:mappednameid').value;
+            var confirmedCheck = document.getElementById('pageId:formId:pageBlockId:modalPbId:modalPbsId:confirmid').checked;
+            jsSave(bs, type, sfdcName, mappedName, confirmedCheck);
+            closeModal();
+        }
+        
+        function closeModal(){
+            jQuery("#dialogBoxDiv").dialog( "destroy" );
+        }
+    </script>
+    
+    <apex:outputPanel id="scriptop">
+        <script>
+            function moveToSalesData(){
+                if({!recordsWithoutError.size} > 0){
+                    var process = confirm('Would you like process {!recordsWithoutError.size} records?');
+                    if(process){
+                        ShowLoading();
+                        jsMoveToSalesData();
+                        recordProceed = true;
+                    }else{
+                        recordProceed = false;
+                    }
+                }else{
+                    recordProceed = false;
+                    alert('You have {!recordsWithoutError.size} records.');
+                }
+            }
+            
+            function salesDatamoved(){
+                HideLoading();
+                if(recordProceed){
+                    alert('Records Successfully Moved.');
+                }
+            }
+        </script>
+    </apex:outputPanel>
+    <apex:form id="formId">
+        <apex:pageBlock id="pageBlockId" title="Sales Data Upload Summary">
+            
+            <!--
+            <apex:actionStatus id="actStatusId">
+                <apex:facet name="start" >
+                  <img src="/img/loading.gif" />
+                </apex:facet>
+            </apex:actionStatus>
+            -->
+            
+            <apex:actionFunction name="jsRefresh" action="{!refresh}" oncomplete="HideLoading();return false;" rerender="pgmsgId, oppbbId, oppbb2Id, opPlants, opRecordsToProcess, opRecordsWithoutError, opRecordsWithError, opRecordsSuccess, scriptop, pageBlockSectionId"/>
+            
+            <apex:actionFunction name="jsProcess" action="{!process}" oncomplete="HideLoading();return false;" reRender="pgmsgId, opPlants, opRecordsToProcess, opRecordsWithoutError, opRecordsWithError, opRecordsSuccess, scriptop"/>
+            <apex:actionFunction name="jsMoveToSalesData" action="{!moveToSalesData}" oncomplete="salesDatamoved();return false;" rerender="pgmsgId, opPlants, opRecordsToProcess, opRecordsWithoutError, opRecordsSuccess, opRecordsWithError, scriptop"/>
+            
+            <apex:actionFunction name="jsSave" action="{!saveMapping}" status="actStatusId" oncomplete="HideLoading();return false;" rerender="pgmsgId, opPlants, opRecordsToProcess, opRecordsWithoutError, opRecordsWithError, opRecordsSuccess, scriptop">
+                <apex:param name="param1" assignTo="{!nmc.Billing_System__c}" value=""/>
+                <apex:param name="param2" assignTo="{!nmc.Type__c}" value=""/>
+                <apex:param name="param3" assignTo="{!nmc.SFDC_Name__c}" value=""/>
+                <apex:param name="param4" assignTo="{!nmc.Mapped_Name__c}" value=""/>
+                <apex:param name="param5" assignTo="{!nmc.Is_Excluded__c}" value=""/>
+            </apex:actionFunction>
+            
+            <apex:pageBlockButtons id="pbbId" location="top">
+                <apex:outputPanel id="oppbbId">
+                    <apex:commandButton value="Process" onclick="ShowLoading();jsProcess(); return false;" disabled="{!OR(selectedBusinessUnit = null, recordsToProcess.size = 0)}"/>
+                    <apex:commandButton value="Move to Sales Data" onclick="moveToSalesData(); return false;" disabled="{!OR(selectedBusinessUnit = null, recordsWithoutError.size = 0)}"/>
+                </apex:outputPanel>
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockButtons id="pbb2Id" location="bottom">
+                <apex:outputPanel id="oppbb2Id">
+                    <apex:commandButton value="Process" onclick="ShowLoading();jsProcess(); return false;" disabled="{!selectedBusinessUnit = null}"/>
+                    <apex:commandButton value="Move to Sales Data" onclick="moveToSalesData(); return false;" disabled="{!selectedBusinessUnit = null}"/>
+                </apex:outputPanel>
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockSection id="pageBlockSectionId" columns="1">
+                <apex:inputField value="{!rawSalesData.Year__c}" onchange="ShowLoading();jsRefresh();return false;"/>
+                
+                <apex:pageBlockSectionItem id="monthsId">
+                    <apex:outputLabel value="Month"/>
+                    <apex:selectList size="1" value="{!selectedMonth}" onchange="ShowLoading();jsRefresh();return false;">
+                        <apex:selectOptions value="{!months}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <!--<apex:inputField value="{!rawSalesData.Billing_System__c}" onchange="jsRefresh();return false;"/>-->
+                
+                <apex:pageBlockSectionItem id="buId">
+                    <apex:outputLabel value="Business Unit Name"/>
+                    <apex:selectList size="1" value="{!selectedBusinessUnit}" onchange="ShowLoading();jsRefresh();return false;">
+                        <apex:selectOptions value="{!businesUnits}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+
+            <apex:outputPanel id="opPlants">
+                <apex:pageBlockSection id="pbstableId1" columns="1" title="Plant Totals">
+                    <apex:pageBlockTable value="{!plants}" var="p" id="pbtId" rendered="{!plants.size > 0}">
+                        <apex:column value="{!p}" headerValue="Plant Name">
+                            <apex:facet name="footer">Total :</apex:facet>
+                        </apex:column>
+                        
+                        <apex:column headerClass="headercolumnstyle" footerClass="headercolumnstyle" headerValue="Sum of Actuals $" style="text-align: right;" >
+                            <apex:outputText value="{0, number, currency}" >
+                                <apex:param value="{!mapPlants[p]}" />
+                            </apex:outputText>
+                            <apex:facet name="footer">
+                                <apex:outputText value="{0, number, currency}" style="text-align: right;" >
+                                    <apex:param value="{!grandTotal}" />
+                                </apex:outputText>
+                            </apex:facet>
+                        </apex:column>
+                        
+                        <apex:column headerClass="headercolumnstyle" footerClass="headercolumnstyle" headerValue="Actual Units" style="text-align: right;" >
+                            <apex:outputText value="{0, number, ###,###,###}" >
+                                <apex:param value="{!mapActualUnits[p]}" />
+                            </apex:outputText>
+                            <apex:facet name="footer">
+                                <apex:outputText value="{0, number, ###,###,###}" style="text-align: right;" >
+                                    <apex:param value="{!grandTotalAU}" />
+                                </apex:outputText>
+                            </apex:facet>
+                        </apex:column>
+                        
+                        <apex:column headerClass="headercolumnstyle" footerClass="headercolumnstyle" headerValue="GM $" style="text-align: right;" >
+                            <apex:outputText value="{0, number, currency}" >
+                                <apex:param value="{!mapGMPerctanges[p]}" />
+                            </apex:outputText>
+                            <apex:facet name="footer">
+                                <apex:outputText value="{0, number, currency}" style="text-align: right;" >
+                                    <apex:param value="{!grandTotalGM}" />
+                                </apex:outputText>
+                            </apex:facet>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                    <apex:outputLabel rendered="{!plants.size = 0}">No records found</apex:outputLabel>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+
+            <apex:outputPanel id="opRecordsToProcess">
+                <apex:pageBlockSection id="pbstableId2" columns="1" title="Records to Process - {!processCount}" >
+                    
+                    <apex:outputPanel layout="block" id="opRecordsToProcessInner" styleClass="container">
+                    <apex:pageBlockTable value="{!recordsToProcess}" var="r" id="pbtId" rendered="{!recordsToProcess.size > 0}">
+                        <apex:column headerValue="Action">
+                            <apex:outputLink value="/{!r.Id}/e" target="_blank" rendered="{!r.Billing_System__c = null}">Edit</apex:outputLink>
+                        </apex:column>
+                        
+                        <apex:column headerValue="Account">
+                            <apex:outputLink value="/{!r.Account__c}" target="_blank" rendered="{!r.Account__c != null}">{!r.Account__r.Name}</apex:outputLink>
+                            <apex:outputField value="{!r.Account_Name__c}" rendered="{!r.Account__c = null}"/>
+                        </apex:column>
+                        
+                        <apex:column value="{!r.Billing_Account_Number__c}"/>
+                        
+                        <apex:column headerValue="Rep Name">
+                            <apex:outputLink value="/{!r.Sales_Rep__c}" target="_blank" rendered="{!r.Sales_Rep__c != null}">{!r.Sales_Rep__r.Name}</apex:outputLink>
+                            <apex:outputField value="{!r.Rep_Name__c}" rendered="{!r.Sales_Rep__c = null}"/>
+                        </apex:column>
+                        
+                        <apex:column headerValue="Plant Product">
+                            <apex:outputLink value="/{!r.Plant_Product__c}" target="_blank" rendered="{!r.Plant_Product__c != null}">{!r.Plant_Product__r.Name}</apex:outputLink>
+                            <apex:outputField value="{!r.Plant_Name__c}" rendered="{!r.Plant_Product__c = null}"/>
+                        </apex:column>
+                        <!--<apex:column value="{!r.OwnerId}"/>-->
+                        <apex:column headerValue="Mgr Group">
+                            <apex:outputLink value="/{!r.Manager__c}" target="_blank">{!r.Manager__r.Name}</apex:outputLink>
+                        </apex:column>
+                        
+                        <apex:column value="{!r.Actual__c}" headerClass="headercolumnstyle" style="text-align: right;" />
+                        <apex:column value="{!r.Actual_Unit__c}" headerClass="headercolumnstyle" style="text-align: right;"/>
+                        <apex:column value="{!r.GMDollars__c}" headerClass="headercolumnstyle" style="text-align: right;"/>
+                        <apex:column value="{!r.GM__c}" headerClass="headercolumnstyle" style="text-align: right;"/>
+                    </apex:pageBlockTable>
+                    </apex:outputPanel>
+                    
+                    <apex:outputLabel rendered="{!recordsToProcess.size = 0}">No records found</apex:outputLabel>                    
+                
+                    <apex:outputPanel id="pagingPanelProcess" rendered="{!recordsToProcess.size > 0}">
+                        <table border="0" align="center">
+                            <tr> 
+                                <td align="center">
+                                    <apex:commandLink onclick="ShowLoading();"  oncomplete="HideLoading();" action="{!previousProcess}" value="Previous" rendered="{!pagecounterProcess != 1}" reRender="opRecordsToProcess"/> 
+                                    &nbsp;
+                                    <apex:outputText >
+                                        {!(pagecounterProcess * ProcessRecordlimits)+1-ProcessRecordlimits}-{!(pagecounterProcess * ProcessRecordlimits) - (ProcessRecordlimits - recordsToProcess.size)}
+                                    </apex:outputText>
+                                    &nbsp;
+                                    <apex:commandLink onclick="ShowLoading();" oncomplete="HideLoading();" action="{!nextProcess}" value="Next" rendered="{!isNextProcess}" reRender="opRecordsToProcess" />
+                                </td> 
+                            </tr>
+                        </table>
+                    </apex:outputPanel>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+
+            <apex:outputPanel id="opRecordsWithoutError">
+                <apex:pageBlockSection id="pbstableId3" columns="1" title="Records Without Error - {!withoutErrorCount}" >
+                    <apex:outputPanel layout="block" id="opRecordsWithoutErrorInner" styleClass="container">
+                    <apex:pageBlockTable value="{!recordsWithoutError}" var="r" id="pbtId" rendered="{!recordsWithoutError.size > 0}">
+                    
+                        <apex:column headerValue="Action">
+                            <apex:outputLink value="/{!r.Id}" target="_blank">View</apex:outputLink>
+                        </apex:column>
+                        
+                        <apex:column headerValue="Raw Account Name">
+                            <apex:outputField value="{!r.Account_Name__c}"/>
+                        </apex:column>
+                        
+                        <apex:column headerValue="SFDC Account">
+                            <apex:outputLink value="/{!r.Account__c}" target="_blank" rendered="{!r.Account__c != null}">{!r.Account__r.Name}</apex:outputLink>
+                        </apex:column>
+                        
+                        <apex:column value="{!r.Billing_Account_Number__c}"/>
+                        
+                        <apex:column headerValue="Rep Name">
+                            <apex:outputLink value="/{!r.Sales_Rep__c}" target="_blank" rendered="{!r.Sales_Rep__c != null}">{!r.Sales_Rep__r.Name}</apex:outputLink>
+                            <apex:outputField value="{!r.Rep_Name__c}" rendered="{!r.Sales_Rep__c = null}"/>
+                        </apex:column>
+                        
+                        <apex:column headerValue="Plant Product">
+                            <apex:outputLink value="/{!r.Plant_Product__c}" target="_blank" rendered="{!r.Plant_Product__c != null}">{!r.Plant_Product__r.Name}</apex:outputLink>
+                            <apex:outputField value="{!r.Plant_Name__c}" rendered="{!r.Plant_Product__c = null}"/>
+                        </apex:column>
+                        <!--<apex:column value="{!r.OwnerId}"/>-->
+                        <apex:column headerValue="Mgr Group">
+                            <apex:outputLink value="/{!r.Manager__c}" target="_blank">{!r.Manager__r.Name}</apex:outputLink>
+                        </apex:column>
+                        
+                        <apex:column value="{!r.Actual__c}" headerClass="headercolumnstyle" style="text-align: right;" />
+                        <apex:column value="{!r.Actual_Unit__c}" headerClass="headercolumnstyle" style="text-align: right;"/>
+                        <apex:column value="{!r.GMDollars__c}" headerClass="headercolumnstyle" style="text-align: right;"/>
+                        <apex:column value="{!r.GM__c}" headerClass="headercolumnstyle" style="text-align: right;"/>
+                        <apex:column value="{!r.Match_Success_Log__c}" />
+                    </apex:pageBlockTable>
+                    </apex:outputPanel>
+                    
+                    <apex:outputLabel rendered="{!recordsWithoutError.size = 0}">No records found</apex:outputLabel>
+                    
+                    <apex:outputPanel id="pagingPanelWithoutError" rendered="{!recordsWithoutError.size > 0}">
+                        <table border="0" align="center">
+                            <tr> 
+                                <td align="center">
+                                    <apex:commandLink onclick="ShowLoading();" oncomplete="HideLoading();" action="{!previousWithoutError}" value="Previous" rendered="{!pagecounterWithoutError != 1}" reRender="opRecordsWithoutError"/> 
+                                    &nbsp;
+                                    <apex:outputText >
+                                        {!(pagecounterWithoutError * WithoutErrorRecordlimits)+1-WithoutErrorRecordlimits}-{!(pagecounterWithoutError * WithoutErrorRecordlimits) - (WithoutErrorRecordlimits - recordsWithoutError.size)}
+                                    </apex:outputText>
+                                    &nbsp;
+                                    <apex:commandLink onclick="ShowLoading();" oncomplete="HideLoading();" action="{!nextWithoutError}" value="Next" rendered="{!isNextWithoutError}" reRender="opRecordsWithoutError" />
+                                </td> 
+                            </tr>
+                        </table>
+                    </apex:outputPanel>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            
+            <apex:outputPanel id="opRecordsSuccess">
+                <apex:pageBlockSection id="pbstableId5" columns="1" title="Successfully Moved - {!successCount}" >
+                    <apex:outputPanel layout="block" id="opRecordsSuccessInner" styleClass="container">
+                    <apex:pageBlockTable value="{!recordSuccessfullyMoved}" var="r" id="pbtId" rendered="{!recordSuccessfullyMoved.size > 0}">
+                        <apex:column headerValue="Account">
+                            <apex:outputLink value="/{!r.Account__c}" target="_blank" rendered="{!r.Account__c != null}">{!r.Account__r.Name}</apex:outputLink>
+                            <apex:outputField value="{!r.Account_Name__c}" rendered="{!r.Account__c = null}"/>
+                        </apex:column>
+                        <apex:column value="{!r.Billing_Account_Number__c}"/>
+                        
+                        <apex:column headerValue="Rep Name">
+                            <apex:outputLink value="/{!r.Sales_Rep__c}" target="_blank" rendered="{!r.Sales_Rep__c != null}">{!r.Sales_Rep__r.Name}</apex:outputLink>
+                            <apex:outputField value="{!r.Rep_Name__c}" rendered="{!r.Sales_Rep__c = null}"/>
+                        </apex:column>
+                        
+                        <apex:column headerValue="Plant Product">
+                            <apex:outputLink value="/{!r.Plant_Product__c}" target="_blank" rendered="{!r.Plant_Product__c != null}">{!r.Plant_Product__r.Name}</apex:outputLink>
+                            <apex:outputField value="{!r.Plant_Name__c}" rendered="{!r.Plant_Product__c = null}"/>
+                        </apex:column>
+                        
+                        <apex:column headerValue="Mgr Group">
+                            <apex:outputLink value="/{!r.Manager__c}" target="_blank">{!r.Manager__r.Name}</apex:outputLink>
+                        </apex:column>
+                        <apex:column value="{!r.Actual__c}" headerClass="headercolumnstyle" style="text-align: right;" />
+                        <apex:column value="{!r.Actual_Unit__c}" headerClass="headercolumnstyle" style="text-align: right;"/>
+                        <apex:column value="{!r.GMDollars__c}" headerClass="headercolumnstyle" style="text-align: right;"/>
+                        <apex:column value="{!r.GM__c}" headerClass="headercolumnstyle" style="text-align: right;"/>
+                        <apex:column headerValue="Sales Data">
+                            <apex:outputLink value="/{!r.Sales_Data__c}" target="_blank">{!r.Sales_Data__r.Name}</apex:outputLink>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                    </apex:outputPanel>
+                    
+                    <apex:outputLabel rendered="{!recordSuccessfullyMoved.size = 0}">No records found</apex:outputLabel>
+                    
+                    <apex:outputPanel id="pagingPanel" rendered="{!recordSuccessfullyMoved.size > 0}">
+                        <table border="0" align="center">
+                            <tr> 
+                                <td align="center">
+                                    <apex:commandLink onclick="ShowLoading();" oncomplete="HideLoading();" action="{!previous}" value="Previous" rendered="{!pagecounter != 1}" reRender="opRecordsSuccess"/> 
+                                    &nbsp;
+                                    <apex:outputText >
+                                        {!(pagecounter * successRecordlimits)+1-successRecordlimits}-{!(pagecounter * successRecordlimits) - (successRecordlimits - recordSuccessfullyMoved.size)}
+                                    </apex:outputText>
+                                    &nbsp;
+                                    <apex:commandLink onclick="ShowLoading();" oncomplete="HideLoading();" action="{!next}" value="Next" rendered="{!isNext}" reRender="opRecordsSuccess" />
+                                </td> 
+                            </tr>
+                        </table>
+                    </apex:outputPanel>
+                    
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            
+            <apex:outputPanel id="opRecordsWithError">
+                <apex:pageBlockSection id="pbstableId4" columns="1" title="Records With Error - {!withErrorCount}" >
+                    <apex:outputPanel layout="block" id="opRecordsWithErrorInner" styleClass="container">
+                    <apex:pageBlockTable value="{!recordsWithError}" var="r" id="pbtId" rendered="{!recordsWithError.size > 0}">
+                        <apex:column headerValue="Action">
+                            <apex:outputLink value="/{!r.Id}/e" target="_blank">Edit</apex:outputLink>
+                            <!--
+                            &nbsp;|&nbsp;
+                            <apex:commandLink value="Create mapping" onclick="createMapping(); return false;"/>
+                            -->
+                        </apex:column>
+                        
+                        <apex:column headerValue="Raw Account Name">
+                            <apex:outputField value="{!r.Account_Name__c}"/>
+                        </apex:column>
+                        
+                        <apex:column headerValue="SFDC Account">
+                            <apex:outputLink value="/{!r.Account__c}" target="_blank" rendered="{!r.Account__c != null}">{!r.Account__r.Name}</apex:outputLink>
+                        </apex:column>
+                        
+                        <apex:column >
+                            <apex:commandLink onclick="createMapping('{!r.Account_Name__c}', 'Account Name'); return false;">
+                                <apex:image url="{!$Resource.EditIcon}" height="12px" width="12px"/>
+                            </apex:commandLink>
+                        </apex:column>
+                        
+                        <apex:column value="{!r.Billing_Account_Number__c}"/>
+                        
+                        <apex:column >
+                            <apex:commandLink onclick="createMapping('{!r.Billing_Account_Number__c}', 'Billing Account Number'); return false;">
+                                <apex:image url="{!$Resource.EditIcon}" height="12px" width="12px"/>
+                            </apex:commandLink>
+                        </apex:column>
+                        
+                        <apex:column headerValue="Rep Name">
+                            <apex:outputLink value="/{!r.Sales_Rep__c}" target="_blank" rendered="{!r.Sales_Rep__c != null}">{!r.Sales_Rep__r.Name}</apex:outputLink>
+                            <apex:outputField value="{!r.Rep_Name__c}" rendered="{!r.Sales_Rep__c = null}"/>
+                        </apex:column>
+                        
+                        <apex:column >
+                            <apex:commandLink onclick="createMapping('{!r.Rep_Name__c}', 'User Name'); return false;">
+                                <apex:image url="{!$Resource.EditIcon}" height="12px" width="12px"/>
+                            </apex:commandLink>
+                        </apex:column>
+                        
+                        <apex:column headerValue="Plant Product">
+                            <apex:outputLink value="/{!r.Plant_Product__c}" target="_blank" rendered="{!r.Plant_Product__c != null}">{!r.Plant_Product__r.Name}</apex:outputLink>
+                            <apex:outputField value="{!r.Plant_Name__c}" rendered="{!r.Plant_Product__c = null}"/>
+                        </apex:column>
+                        
+                        <apex:column >
+                            <apex:commandLink onclick="createMapping('{!r.Plant_Name__c}', 'Plant Product Name'); return false;">
+                                <apex:image url="{!$Resource.EditIcon}" height="12px" width="12px"/>
+                            </apex:commandLink>
+                        </apex:column>
+                        
+                        <!--<apex:column value="{!r.OwnerId}"/>-->
+                        <apex:column headerValue="Mgr Group">
+                            <apex:outputLink value="/{!r.Manager__c}" target="_blank">{!r.Manager__r.Name}</apex:outputLink>
+                        </apex:column>
+                        <apex:column value="{!r.Actual__c}" headerClass="headercolumnstyle" style="text-align: right;"/>
+                        <apex:column value="{!r.Actual_Unit__c}" headerClass="headercolumnstyle" style="text-align: right;"/>
+                        <apex:column value="{!r.GMDollars__c}" headerClass="headercolumnstyle" style="text-align: right;"/>
+                        <apex:column value="{!r.GM__c}" headerClass="headercolumnstyle" style="text-align: right;"/>
+                        <apex:column value="{!r.Error_Log__c}" />
+                        <apex:column value="{!r.Match_Success_Log__c}" />
+                    </apex:pageBlockTable>
+                    </apex:outputPanel>
+                    
+                    <apex:outputLabel rendered="{!recordsWithError.size = 0}">No records found</apex:outputLabel>
+                    
+                    <apex:outputPanel id="pagingPanelWithError" rendered="{!recordsWithError.size > 0}">
+                        <table border="0" align="center">
+                            <tr> 
+                                <td align="center">
+                                    <apex:commandLink onclick="ShowLoading();" oncomplete="HideLoading();" action="{!previousWithError}" value="Previous" rendered="{!pagecounterWithError != 1}" reRender="opRecordsWithError"/> 
+                                    &nbsp;
+                                    <apex:outputText >
+                                        {!(pagecounterWithError * withErrorRecordlimits)+1-withErrorRecordlimits}-{!(pagecounterWithError * withErrorRecordlimits) - (withErrorRecordlimits - recordsWithError.size)}
+                                    </apex:outputText>
+                                    &nbsp;
+                                    <apex:commandLink onclick="ShowLoading();" oncomplete="HideLoading();" action="{!nextWithError}" value="Next" rendered="{!isNextWithError}" reRender="opRecordsWithError" />
+                                </td> 
+                            </tr>
+                        </table>
+                    </apex:outputPanel>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            
+            <!-- Div of Modal box-->
+            <div id="dialogBoxDiv" style="display:none;">
+                <apex:pageBlock id="modalPbId">
+                    <apex:pageBlockSection columns="1" id="modalPbsId">
+                        <apex:inputField value="{!nmc.Billing_System__c}" id="bsid"/>
+                        <apex:inputField value="{!nmc.Type__c}" id="typeid"/>
+                        <apex:inputField value="{!nmc.Mapped_Value__c}" id="mappednameid"/>
+                        <apex:inputField value="{!nmc.SFDC_Value__c}" id="sfdcnameid"/>
+                        <apex:inputField value="{!nmc.Is_Excluded__c}" id="confirmid"/>
+                    </apex:pageBlockSection>
+                    
+                    <apex:pageBlockButtons location="bottom">
+                        <apex:commandButton value="Save" onclick="saveMapping();return false;" />
+                        <apex:commandButton value="Cancel" onclick="closeModal();return false;" />
+                    </apex:pageBlockButtons> 
+                           
+                </apex:pageBlock>
+            </div> 
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

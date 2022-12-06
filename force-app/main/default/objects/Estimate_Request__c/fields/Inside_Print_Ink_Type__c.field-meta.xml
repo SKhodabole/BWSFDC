@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inside_Print_Ink_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Inside Print - Ink Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1</fullName>
+                <default>false</default>
+                <label>1</label>
+            </value>
+            <value>
+                <fullName>2</fullName>
+                <default>false</default>
+                <label>2</label>
+            </value>
+            <value>
+                <fullName>Conventional</fullName>
+                <default>false</default>
+                <label>Conventional</label>
+            </value>
+            <value>
+                <fullName>UV</fullName>
+                <default>false</default>
+                <label>UV</label>
+            </value>
+            <value>
+                <fullName>Metallic</fullName>
+                <default>false</default>
+                <label>Metallic</label>
+            </value>
+            <value>
+                <fullName>LMQ</fullName>
+                <default>false</default>
+                <label>LMQ</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

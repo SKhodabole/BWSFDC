@@ -1,0 +1,41 @@
+<!-- 
+ *  Purpose         :   This page is to take the user's input for the Owner Change Initiated By  field.
+                            This page will be called from the "Change Owner" button. Once user click on Next, 
+                            it will be navigated to Change Owner standard screen
+ *
+ *  Created By      :   Bhavi Sharma(Simplyforce)
+ *
+ *  Created Date    :   07/22/2015
+ *
+ *  Revision Logs   :   V_1.0 - Created
+ *
+ -->
+<apex:page StandardController="Account" extensions="AccountOwnerChangeInitiatedByController">
+    
+    <!-- Section Header -->
+    <apex:sectionHeader title="Ownership Edit" subTitle="{!Account.Name}" />
+    
+    <!-- Form -->
+    <apex:form id="frm">
+    
+        <!-- Page Block -->
+        <apex:pageBlock mode="edit">
+            
+            <!-- Page Messages -->
+            <apex:pageMessages id="validationMsg"/>
+            
+            <!-- Buttons -->
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Cancel" action="{!cancel}" immediate="true"/>
+                <apex:commandButton value="Next" action="{!redirect}" immediate="true"/>
+                <apex:commandButton value="Save & Next" action="{!saveAndRedirect}" />
+            </apex:pageBlockButtons>
+            
+            <!-- PageBlock Section -->
+            <apex:pageBlockSection title="Owner Change">
+            
+                <apex:inputField value="{!Account.Owner_Change_Initiated_By__c}" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

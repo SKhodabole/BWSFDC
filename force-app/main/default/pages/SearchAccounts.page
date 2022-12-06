@@ -1,0 +1,177 @@
+<!--
+        Visualforce page to search accounts
+ -->        
+<apex:page controller="SearchAccountsController" id="page" tabStyle="Account">
+    <apex:pageMessages id="pgmsgId"/>
+    
+    <!-- block UI component -->
+    <c:BlockUI />
+    <!-- Action Status -->     
+    <apex:actionStatus onStart="blockMe();" onstop="unBlockMe();" id="waitMsg"/>
+        
+    <apex:form id="form">
+        
+        <apex:pageBlock id="pb" title="Search Accounts">
+            <center>
+                <apex:commandButton value="Search" action="{!refresh}" rerender="form" status="waitMsg" style="align:center;"/>
+            </center>
+            <br/>
+            <apex:pageBlockSection columns="2" title="Field to Search Account" collapsible="false">
+                <apex:pageBlockSectionItem >
+                    <apex:outPutLabel value="Account Name" style="font-weight:bold"/>
+                    <apex:inputText maxlength="100" value="{!accountName}" onkeypress="handle(event)"/>
+                </apex:pageBlockSectionItem>
+
+                <apex:inputField value="{!account.BillingStreet}" rendered="{!isSystemAdmin}" onkeypress="handle(event)"/>
+
+                <apex:pageBlockSectionItem >
+                    <apex:outPutLabel value="Phone" style="font-weight:bold"/>
+                    <apex:inputText maxlength="100" value="{!phone}" onkeypress="handle(event)"/>
+                </apex:pageBlockSectionItem>
+
+                <apex:inputField value="{!account.BillingCity}" rendered="{!isSystemAdmin}" onkeypress="handle(event)"/>
+
+                <apex:pageBlockSectionItem >
+                    <apex:outPutLabel value="Website" style="font-weight:bold"/>
+                    <apex:inputText maxlength="100" value="{!website}" onkeypress="handle(event)"/>
+                </apex:pageBlockSectionItem>
+
+                <apex:inputField value="{!account.BillingState}" rendered="{!isSystemAdmin}" onkeypress="handle(event)"/>
+
+                <apex:inputField label="Account Owner" value="{!account.OwnerId}" required="false" rendered="{!isSystemAdmin}" onkeypress="handle(event)"/>
+
+                <apex:inputField value="{!account.BillingCountry}" rendered="{!isSystemAdmin}" onkeypress="handle(event)"/>
+
+                <apex:inputField label="Manager" value="{!manager.OwnerId}" required="false" rendered="{!isSystemAdmin}" onkeypress="handle(event)"/>
+
+                <apex:inputField value="{!account.BillingPostalCode}" rendered="{!isSystemAdmin}" onkeypress="handle(event)"/>
+
+                <apex:pageBlockSectionItem rendered="{!isSystemAdmin}">
+                    <apex:outPutLabel value="SF Account ID" style="font-weight:bold"/>
+                    <apex:inputText maxlength="100" value="{!SF_Acct_ID}" onkeypress="handle(event)"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection id="oppSection" columns="2" title="Fields to search Opportunities" collapsible="false">
+                        <apex:Inputfield id="txt" value="{!opp.Name}" required="false" onkeypress="handle(event)"/>
+            </apex:pageBlockSection>   
+            
+            
+            <apex:pageBlockSection id="ldSection" columns="2" title="Fields to search Leads" collapsible="false">
+                    <apex:repeat id="rpt" value="{!$ObjectType.Lead.fieldsets.Lead_Search_Set}" var="fieldValue">
+                        <apex:Inputfield id="txt" value="{!lead[fieldValue]}" required="false" onkeypress="handle(event)"/>
+                    </apex:repeat>
+                
+            </apex:pageBlockSection>   
+            
+            <br/>
+            
+            <center>
+                <apex:commandButton id="cmdBut" value="Search" action="{!refresh}" status="waitMsg" rerender="form"/>
+            </center>
+            
+            <apex:pageBlockSection columns="1" title="Search Results Accounts" collapsible="false">
+                <apex:pageBlockTable value="{!Accounts}" var="a" rendered="{!Accounts.size > 0}">
+                    <apex:column headervalue="Account Name">
+                        <apex:outputLink value="/{!a.Id}" target="_blank">{!a.Name}</apex:outputLink>
+                    </apex:column>
+                    <apex:column value="{!a.SF_Acct_ID__c}"/>
+                    
+                    <apex:column headervalue="Parent Account">
+                        <apex:outputLink value="/{!a.ParentId}" target="_blank">{!a.Parent.Name}</apex:outputLink>
+                    </apex:column>
+                    
+                    <apex:column value="{!a.OwnerId}" width="100px" style="white-space: nowrap;"/>
+                    <apex:column value="{!a.Owner.ManagerId}" width="100px" style="white-space: nowrap;"/>
+                    <apex:column headerValue="Billing Address">
+                    {!a.BillingStreet} {!a.BillingCity} {!a.BillingState} {!a.BillingCountry} {!a.BillingPostalCode}
+                    </apex:column>
+                    <apex:column value="{!a.Phone}"/>
+                    <apex:column value="{!a.Website}"/>
+                </apex:pageBlockTable>
+
+                <apex:panelGrid columns="4">
+                    <apex:commandButton rendered="{!NOT(Accounts.size = 0)}" status="fetchStatus" reRender="pb" value="<" action="{!previous}" disabled="{!!hasPrevious}" title="Previous Page"/>
+                    <apex:commandButton rendered="{!NOT(Accounts.size = 0)}" status="fetchStatus" reRender="pb" value=">" action="{!next}" disabled="{!!hasNext}" title="Next Page"/>
+                    <apex:outputText rendered="{!NOT(Accounts.size = 0)}" >{!(pageNumber * size)+1-size}-{!IF((pageNumber * size)>noOfRecords, noOfRecords,(pageNumber * size))} of {!IF(noOfRecords >= 10000, '10000+', noOfRecords)}</apex:outputText>
+                    <apex:outputPanel style="color:#4AA02C;font-weight:bold">
+                        <apex:actionStatus id="fetchStatus" startText="Fetching..." stopText=""/>
+                    </apex:outputPanel>
+                </apex:panelGrid>
+
+                <apex:outputLabel rendered="{!Accounts.size == 0}"> No records found.</apex:outputLabel>
+                </apex:pageBlockSection>
+                
+                 <!-- ------------- -->
+             
+             <apex:pageBlockSection columns="1" title="Search Results Opportunities" collapsible="false">
+                     <apex:pageBlockTable value="{!opportunities}" var="op" rendered="{!opportunities.size > 0}">
+                        <apex:column headervalue="Opportunity Name">
+                            <apex:outputLink value="/{!op.Id}" target="_blank">{!op.Name}</apex:outputLink>
+                        </apex:column>
+                        <apex:column headervalue="Opportunity Owner" value="{!op.OwnerId}" width="100px" style="white-space: nowrap;"/> 
+                        <apex:column headervalue="Opportunity Owner Manager" value="{!op.Owner.ManagerId}" width="100px" style="white-space: nowrap;"/>
+                        
+                        <apex:column headervalue="Account Name" >
+                            <apex:outputLink value="/{!op.AccountId}" target="_blank">{!op.Account.Name}</apex:outputLink>
+                        </apex:column>
+                        <apex:column headervalue="Account Owner" value="{!op.Account.OwnerId}" width="100px" style="white-space: nowrap;"/>   
+                        <apex:column headervalue="Account Owner Manager" value="{!op.Account.Owner.ManagerId}" width="100px" style="white-space: nowrap;"/>
+                        
+                    </apex:pageBlockTable>
+    
+                    <apex:outputLabel rendered="{!opportunities.size == 0}"> No records found.</apex:outputLabel>
+                  
+            </apex:pageBlockSection>
+                
+                <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+                
+                <apex:pageBlockSection columns="1" title="Search Results Leads" collapsible="false">
+                     <apex:pageBlockTable value="{!tempListOfLead}" var="ld" rendered="{!tempListOfLead.size > 0}">
+                        <apex:column headervalue="LeadName">
+                            <apex:outputLink value="/{!ld.Id}" target="_blank">{!ld.FirstName} {!ld.LastName}</apex:outputLink>
+                        </apex:column>
+                      
+                       
+                        <apex:column headervalue="Lead Owner" value="{!ld.OwnerId}" width="100px" style="white-space: nowrap;"/>
+                        <apex:column headervalue="Lead Status" value="{!ld.Status}" width="100px" style="white-space: nowrap;"/>   
+                        <apex:column headervalue="Lead Source" value="{!ld.LeadSource}" width="100px" style="white-space: nowrap;"/>
+                        <apex:column headervalue="Email" value="{!ld.Email}" width="100px" style="white-space: nowrap;"/>
+                        <apex:column headerValue="Address">
+                        {!ld.Street} {!ld.City} {!ld.State} {!ld.Country} {!ld.PostalCode}
+                        </apex:column> 
+                     
+                    </apex:pageBlockTable>
+    
+                    <apex:panelGrid columns="4">
+                        <apex:commandButton rendered="{!NOT(tempListOfLead.size = 0)}" status="fetchStatus" reRender="pb" value="<" action="{!previousLead}" Disabled="{!PreviousButtonDisabled}" title="Previous Page"/>
+                        <apex:commandButton rendered="{!NOT(tempListOfLead.size = 0)}" status="fetchStatus" reRender="pb" value=">" action="{!nextLead}" Disabled="{!NextButtonDisabled}" title="Next Page"/>
+                        <apex:outputText rendered="{!NOT(tempListOfLead.size = 0)}" >{!startLead}- {!endLead} of {!totalNoOfLeads} Records</apex:outputText>
+                        <apex:outputPanel style="color:#4AA02C;font-weight:bold">
+                            <apex:actionStatus id="fetchStatus" startText="Fetching..." stopText=""/>
+                        </apex:outputPanel>   
+                    </apex:panelGrid>
+    
+                    <apex:outputLabel rendered="{!tempListOfLead.size == 0}"> No records found.</apex:outputLabel>
+                  
+            </apex:pageBlockSection>        
+            
+           
+        </apex:pageBlock>
+    </apex:form>
+    <script>
+        window.onload = function() {
+            var s = document.getElementById("page:form:pb:ldSection:rpt:3:txt");
+            console.log(s);
+            s.options[0].selected = true;
+        }
+        
+        function handle(e){
+        if(e.keyCode === 13){
+            document.getElementById("page:form:pb:cmdBut").click();
+        }
+
+        return false;
+    }
+    </script>
+</apex:page>

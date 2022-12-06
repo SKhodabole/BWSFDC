@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Perf_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Perf Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Perf</fullName>
+                <default>false</default>
+                <label>No Perf</label>
+            </value>
+            <value>
+                <fullName>Standard Zip</fullName>
+                <default>false</default>
+                <label>Standard Zip</label>
+            </value>
+            <value>
+                <fullName>Horizontal</fullName>
+                <default>false</default>
+                <label>Horizontal</label>
+            </value>
+            <value>
+                <fullName>Horizontal Vertical</fullName>
+                <default>false</default>
+                <label>Horizontal Vertical</label>
+            </value>
+            <value>
+                <fullName>Single Ply</fullName>
+                <default>false</default>
+                <label>Single Ply</label>
+            </value>
+            <value>
+                <fullName>Diagonal</fullName>
+                <default>false</default>
+                <label>Diagonal</label>
+            </value>
+            <value>
+                <fullName>Double Zip</fullName>
+                <default>false</default>
+                <label>Double Zip</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

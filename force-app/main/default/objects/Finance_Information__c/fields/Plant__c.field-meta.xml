@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Plant__c</fullName>
+    <externalId>false</externalId>
+    <label>Plant</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CL - Acclaim</fullName>
+                <default>false</default>
+                <label>CL - Acclaim</label>
+            </value>
+            <value>
+                <fullName>CL - Express Label</fullName>
+                <default>false</default>
+                <label>CL - Express Label</label>
+            </value>
+            <value>
+                <fullName>CL - Lightning</fullName>
+                <default>false</default>
+                <label>CL - Lightning</label>
+            </value>
+            <value>
+                <fullName>CL - Maverick</fullName>
+                <default>false</default>
+                <label>CL - Maverick</label>
+            </value>
+            <value>
+                <fullName>CL - New Albany</fullName>
+                <default>false</default>
+                <label>CL - New Albany</label>
+            </value>
+            <value>
+                <fullName>CL - Omaha</fullName>
+                <default>false</default>
+                <label>CL - Omaha</label>
+            </value>
+            <value>
+                <fullName>CP - Lancaster</fullName>
+                <default>false</default>
+                <label>CP - Lancaster</label>
+            </value>
+            <value>
+                <fullName>CP - Toledo</fullName>
+                <default>false</default>
+                <label>CP - Toledo</label>
+            </value>
+            <value>
+                <fullName>Envelope plants - Finance Only</fullName>
+                <default>false</default>
+                <label>Envelope plants - Finance Only</label>
+            </value>
+            <value>
+                <fullName>JDE - Master</fullName>
+                <default>false</default>
+                <label>JDE - Master</label>
+            </value>
+            <value>
+                <fullName>L&amp;P - Gilbreth</fullName>
+                <default>false</default>
+                <label>L&amp;P - Gilbreth</label>
+            </value>
+            <value>
+                <fullName>L&amp;P - International</fullName>
+                <default>false</default>
+                <label>L&amp;P - International</label>
+            </value>
+            <value>
+                <fullName>MMT</fullName>
+                <default>false</default>
+                <label>MMT</label>
+            </value>
+            <value>
+                <fullName>Nashua</fullName>
+                <default>false</default>
+                <label>Nashua</label>
+            </value>
+            <value>
+                <fullName>NEC - Finance Only</fullName>
+                <default>false</default>
+                <label>NEC - Finance Only</label>
+            </value>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <label>TBD</label>
+            </value>
+            <value>
+                <fullName>Atlanta</fullName>
+                <default>false</default>
+                <label>Atlanta</label>
+            </value>
+            <value>
+                <fullName>CP - Amarillo</fullName>
+                <default>false</default>
+                <label>CP - Amarillo</label>
+            </value>
+            <value>
+                <fullName>CP - Clixx</fullName>
+                <default>false</default>
+                <label>CP - Clixx</label>
+            </value>
+            <value>
+                <fullName>CP - Conklin</fullName>
+                <default>false</default>
+                <label>CP - Conklin</label>
+            </value>
+            <value>
+                <fullName>CP - Content</fullName>
+                <default>false</default>
+                <label>CP - Content</label>
+            </value>
+            <value>
+                <fullName>CP - Easton</fullName>
+                <default>false</default>
+                <label>CP - Easton</label>
+            </value>
+            <value>
+                <fullName>CP - Garland</fullName>
+                <default>false</default>
+                <label>CP - Garland</label>
+            </value>
+            <value>
+                <fullName>CP - Hurlock</fullName>
+                <default>false</default>
+                <label>CP - Hurlock</label>
+            </value>
+            <value>
+                <fullName>CP - Los Angeles</fullName>
+                <default>false</default>
+                <label>CP - Los Angeles</label>
+            </value>
+            <value>
+                <fullName>CP - Minneapolis East</fullName>
+                <default>false</default>
+                <label>CP - Minneapolis East</label>
+            </value>
+            <value>
+                <fullName>CP - Port City</fullName>
+                <default>false</default>
+                <label>CP - Port City</label>
+            </value>
+            <value>
+                <fullName>CP - Portland</fullName>
+                <default>false</default>
+                <label>CP - Portland</label>
+            </value>
+            <value>
+                <fullName>CP - Richmond</fullName>
+                <default>false</default>
+                <label>CP - Richmond</label>
+            </value>
+            <value>
+                <fullName>CP - San Antonio</fullName>
+                <default>false</default>
+                <label>CP - San Antonio</label>
+            </value>
+            <value>
+                <fullName>CP - San Francisco</fullName>
+                <default>false</default>
+                <label>CP - San Francisco</label>
+            </value>
+            <value>
+                <fullName>CP - Seattle</fullName>
+                <default>false</default>
+                <label>CP - Seattle</label>
+            </value>
+            <value>
+                <fullName>CP - Sidney</fullName>
+                <default>false</default>
+                <label>CP - Sidney</label>
+            </value>
+            <value>
+                <fullName>CP - St. Louis</fullName>
+                <default>false</default>
+                <label>CP - St. Louis</label>
+            </value>
+            <value>
+                <fullName>CP - Vernon</fullName>
+                <default>false</default>
+                <label>CP - Vernon</label>
+            </value>
+            <value>
+                <fullName>CUST ENV-CLACKAMAS</fullName>
+                <default>false</default>
+                <label>CUST ENV-CLACKAMAS</label>
+            </value>
+            <value>
+                <fullName>CUST ENV-TULLAHOMA</fullName>
+                <default>false</default>
+                <label>CUST ENV-TULLAHOMA</label>
+            </value>
+            <value>
+                <fullName>ENV - NEC JDE</fullName>
+                <default>false</default>
+                <label>ENV - NEC JDE</label>
+            </value>
+            <value>
+                <fullName>ENV - ONEMAX</fullName>
+                <default>false</default>
+                <label>ENV - ONEMAX</label>
+            </value>
+            <value>
+                <fullName>ENV - QUALITY PARK</fullName>
+                <default>false</default>
+                <label>ENV - QUALITY PARK</label>
+            </value>
+            <value>
+                <fullName>Hagen</fullName>
+                <default>false</default>
+                <label>Hagen</label>
+            </value>
+            <value>
+                <fullName>Indianapolis</fullName>
+                <default>false</default>
+                <label>Indianapolis</label>
+            </value>
+            <value>
+                <fullName>Kenosha</fullName>
+                <default>false</default>
+                <label>Kenosha</label>
+            </value>
+            <value>
+                <fullName>L&amp;P - Cadmus</fullName>
+                <default>false</default>
+                <label>L&amp;P - Cadmus</label>
+            </value>
+            <value>
+                <fullName>L&amp;P - Charlotte</fullName>
+                <default>false</default>
+                <label>L&amp;P - Charlotte</label>
+            </value>
+            <value>
+                <fullName>L&amp;P - Clixx</fullName>
+                <default>false</default>
+                <label>L&amp;P - Clixx</label>
+            </value>
+            <value>
+                <fullName>L&amp;P - Dominican Republic</fullName>
+                <default>false</default>
+                <label>L&amp;P - Dominican Republic</label>
+            </value>
+            <value>
+                <fullName>L&amp;P - Honduras</fullName>
+                <default>false</default>
+                <label>L&amp;P - Honduras</label>
+            </value>
+            <value>
+                <fullName>L&amp;P - Intl - Asia</fullName>
+                <default>false</default>
+                <label>L&amp;P - Intl - Asia</label>
+            </value>
+            <value>
+                <fullName>L&amp;P - Intl – Costa Rica</fullName>
+                <default>false</default>
+                <label>L&amp;P - Intl – Costa Rica</label>
+            </value>
+            <value>
+                <fullName>L&amp;P - Intl – DR</fullName>
+                <default>false</default>
+                <label>L&amp;P - Intl – DR</label>
+            </value>
+            <value>
+                <fullName>L&amp;P - Intl – India</fullName>
+                <default>false</default>
+                <label>L&amp;P - Intl – India</label>
+            </value>
+            <value>
+                <fullName>L&amp;P - MMT</fullName>
+                <default>false</default>
+                <label>L&amp;P - MMT</label>
+            </value>
+            <value>
+                <fullName>L&amp;P - Rex</fullName>
+                <default>false</default>
+                <label>L&amp;P - Rex</label>
+            </value>
+            <value>
+                <fullName>Nashua - California</fullName>
+                <default>false</default>
+                <label>Nashua - California</label>
+            </value>
+            <value>
+                <fullName>Nashua - Label</fullName>
+                <default>false</default>
+                <label>Nashua - Label</label>
+            </value>
+            <value>
+                <fullName>Nashua - Merrimack</fullName>
+                <default>false</default>
+                <label>Nashua - Merrimack</label>
+            </value>
+            <value>
+                <fullName>Nashua – Omaha</fullName>
+                <default>false</default>
+                <label>Nashua – Omaha</label>
+            </value>
+            <value>
+                <fullName>Nashua - POS</fullName>
+                <default>false</default>
+                <label>Nashua - POS</label>
+            </value>
+            <value>
+                <fullName>Nashua - Rx Technology</fullName>
+                <default>false</default>
+                <label>Nashua - Rx Technology</label>
+            </value>
+            <value>
+                <fullName>Nashua – Tennessee</fullName>
+                <default>false</default>
+                <label>Nashua – Tennessee</label>
+            </value>
+            <value>
+                <fullName>QP-BERESFORD</fullName>
+                <default>false</default>
+                <label>QP-BERESFORD</label>
+            </value>
+            <value>
+                <fullName>QP-EXTON</fullName>
+                <default>false</default>
+                <label>QP-EXTON</label>
+            </value>
+            <value>
+                <fullName>QP-MINNEAPOLIS</fullName>
+                <default>false</default>
+                <label>QP-MINNEAPOLIS</label>
+            </value>
+            <value>
+                <fullName>QP-ORCHARD PARK</fullName>
+                <default>false</default>
+                <label>QP-ORCHARD PARK</label>
+            </value>
+            <value>
+                <fullName>QP-ST GEORGE</fullName>
+                <default>false</default>
+                <label>QP-ST GEORGE</label>
+            </value>
+            <value>
+                <fullName>Santa Fe Springs</fullName>
+                <default>false</default>
+                <label>Santa Fe Springs</label>
+            </value>
+            <value>
+                <fullName>SAP</fullName>
+                <default>false</default>
+                <label>SAP</label>
+            </value>
+            <value>
+                <fullName>Williamsburg</fullName>
+                <default>false</default>
+                <label>Williamsburg</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

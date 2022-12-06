@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sell_Price_Qty_9__c</fullName>
+    <externalId>false</externalId>
+    <formula>If (( Qty_9__c &gt;0), (If (Inventory__c =TRUE, ((Cost_9__c /(1- Margin_Qty_9__c ) )+ (Cost_9__c * Freight_Percentage__c )+( Freight_Cost_Per_Case__c )+( Cost_9__c *0.01)), ((Cost_9__c / (1- Margin_Qty_9__c ))+ (Cost_9__c * Freight_Percentage__c )+( Freight_Cost_Per_Case__c )))), 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sell Price - Qty 9</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

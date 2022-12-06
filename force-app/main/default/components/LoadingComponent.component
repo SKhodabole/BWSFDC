@@ -1,0 +1,70 @@
+<apex:component access="global">
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <script language="javascript" type="text/javascript">
+        $.noConflict();
+        function ShowLoading(){   
+            try {
+                jQuery('#el_loading .waitingHolder').css({position:'absolute',top:jQuery(window).scrollTop()+150+'px'});
+                jQuery('#el_loading').css('display','block');
+            } 
+            catch(ex){
+                alert(ex);
+            }  
+        } 
+         
+        function HideLoading(){  
+            try{
+               jQuery('#el_loading').hide(); 
+            }
+            catch(ex){
+                alert(ex);
+            } 
+        }
+    </script> 
+    
+    <style>
+        #el_loading{
+            background-color : black;
+            height : 100%;
+            top : 0px;
+            opacity : .7;
+            width : 100%;
+            overflow: hidden;
+        }
+        
+        #el_loading .waitingHolder{
+            
+            width : 350px;
+            height : 70px;
+            background-color : white;
+            position: relative; 
+            overflow: hidden; 
+            margin-top: -50px; 
+            left: 40%; 
+            margin-left: -75px; 
+            padding-left: 30px;
+            border-radius: 10px; /* W3C */   
+            opacity : 1;
+            z-index:  1000;
+       
+        }
+        #el_loading .waitingHolder .waitingImage {
+            align : center;
+            padding-top : 20px;
+            z-index:  9998;
+        }
+        #el_loading .waitingHolder .waitingDescription {
+            align : center;
+            padding-top : 30px;
+            z-index:  9998;
+        }
+    </style>
+    <apex:outputpanel >
+        <div class = "waitingSearchDiv" id = "el_loading" style="display:none;"> 
+            <div class = "waitingHolder" >
+                <img class = "waitingImage" src = "/img/loading32.gif" title = "Please Wait..." />
+                <span class = "waitingDescription">Loading...</span>
+            </div>
+        </div>
+    </apex:outputpanel>
+</apex:component>

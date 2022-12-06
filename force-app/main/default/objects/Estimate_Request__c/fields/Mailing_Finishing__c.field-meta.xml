@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mailing_Finishing__c</fullName>
+    <externalId>false</externalId>
+    <label>Mailing Finishing</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Laser 1/0 Black Simplex</fullName>
+                <default>false</default>
+                <label>Laser 1/0 Black Simplex</label>
+            </value>
+            <value>
+                <fullName>Laser 1/1 Black Duplex</fullName>
+                <default>false</default>
+                <label>Laser 1/1 Black Duplex</label>
+            </value>
+            <value>
+                <fullName>Sheet Size Length (Inches)</fullName>
+                <default>false</default>
+                <label>Sheet Size Length (Inches)</label>
+            </value>
+            <value>
+                <fullName>Sheet Size Height (Inches)</fullName>
+                <default>false</default>
+                <label>Sheet Size Height (Inches)</label>
+            </value>
+            <value>
+                <fullName>Overprint on litho shell</fullName>
+                <default>false</default>
+                <label>Overprint on litho shell</label>
+            </value>
+            <value>
+                <fullName>PDF soft proof</fullName>
+                <default>false</default>
+                <label>PDF soft proof</label>
+            </value>
+            <value>
+                <fullName>White paper proof</fullName>
+                <default>false</default>
+                <label>White paper proof</label>
+            </value>
+            <value>
+                <fullName>Hard copy proof</fullName>
+                <default>false</default>
+                <label>Hard copy proof</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>9</visibleLines>
+</CustomField>

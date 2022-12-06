@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_cannot_move_Status_to_Draft</fullName>
+    <active>false</active>
+    <description>You may not change the Status back to Draft after the RFQ has been Submitted.  If you need to edit the RFQ, contact Estimating and ask them to chnage the status to Draft, then edit and resumbit the RFQ.</description>
+    <errorConditionFormula>($Profile.Id=&quot;00e4P000001ErNK&quot;
+&amp;&amp;
+text(Status__c)=&quot;Draft&quot;
+&amp;&amp;
+text(PRIORVALUE(Status__c))=&quot;Submitted&quot;)
+||
+($Profile.Id=&quot;00e4P000001ErNK&quot;
+&amp;&amp;
+text(Status__c)=&quot;Draft&quot;
+&amp;&amp;
+text(PRIORVALUE(Status__c))=&quot;Complete&quot;)</errorConditionFormula>
+    <errorMessage>You may not change the Status back to Draft after the RFQ has been Submitted.  If you need to edit the RFQ, contact Estimating and ask them to chnage the status to Draft, then edit and resumbit the RFQ.</errorMessage>
+</ValidationRule>

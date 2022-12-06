@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outside_Print_Coating_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Outside Print - Coating Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Gloss Water Based</fullName>
+                <default>false</default>
+                <label>Gloss Water Based</label>
+            </value>
+            <value>
+                <fullName>Matte</fullName>
+                <default>false</default>
+                <label>Matte</label>
+            </value>
+            <value>
+                <fullName>Satin</fullName>
+                <default>false</default>
+                <label>Satin</label>
+            </value>
+            <value>
+                <fullName>Spot</fullName>
+                <default>false</default>
+                <label>Spot</label>
+            </value>
+            <value>
+                <fullName>UV</fullName>
+                <default>false</default>
+                <label>UV</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

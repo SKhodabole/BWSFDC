@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_cannot_edit_after_submitted</fullName>
+    <active>false</active>
+    <description>You may not edit the RFQ after it has been submitted.  If you need to edit the RFQ, contact Estimating and ask them to change the Status back to Draft, then edit and resubmit the RFQ.</description>
+    <errorConditionFormula>$Profile.Id=&quot;00e4P000001ErNK&quot;
+&amp;&amp;
+Text(Status__c) &lt;&gt; &quot;Draft&quot;
+&amp;&amp;
+Text(PRIORVALUE(Status__c)) &lt;&gt; &quot;Draft&quot;</errorConditionFormula>
+    <errorMessage>You may not edit the RFQ after it has been submitted.  If you need to edit the RFQ, contact Estimating and ask them to change the Status back to Draft, then edit and resubmit the RFQ.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Paper_Certification__c</fullName>
+    <externalId>false</externalId>
+    <label>Job/Paper Certification</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None/Blank</fullName>
+                <default>true</default>
+                <label>None/Blank</label>
+            </value>
+            <value>
+                <fullName>FSC</fullName>
+                <default>false</default>
+                <label>FSC</label>
+            </value>
+            <value>
+                <fullName>SFI</fullName>
+                <default>false</default>
+                <label>SFI</label>
+            </value>
+            <value>
+                <fullName>SGP</fullName>
+                <default>false</default>
+                <label>SGP</label>
+            </value>
+            <value>
+                <fullName>PEFC</fullName>
+                <default>false</default>
+                <label>PEFC</label>
+            </value>
+            <value>
+                <fullName>PEFC &amp; SFI</fullName>
+                <default>false</default>
+                <label>PEFC &amp; SFI</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

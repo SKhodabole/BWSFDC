@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hanger_Hole_Type</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(RecordType.DeveloperName = &apos;Flexible_Packaging_Converted_3_Side_Seal&apos;,
+RecordType.DeveloperName = &apos;Flexible_Packaging_Converted_Stand_Up_Pouch&apos;),
+OR(
+AND(ISPICKVAL(Hanger_Hole1__c, &apos;Other&apos;),ISBLANK( Hanger_Hole_Type_Other__c)), 
+AND(NOT(ISBLANK(TEXT(Hanger_Hole_Type__c))), NOT(ISPICKVAL(Hanger_Hole_Type__c, &apos;None&apos;)), ISBLANK(TEXT(Contents__c)))
+))</errorConditionFormula>
+    <errorMessage>Hanger Hole Type Other or Contents are required.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RFQ_Shrink_Sleeve_Finish_Validation</fullName>
+    <active>true</active>
+    <description>This validation is only for Shrink Sleeve type record.</description>
+    <errorConditionFormula>IF(AND(RecordType.DeveloperName = &apos;Shrink_Only&apos;, 
+ISBLANK( If_varnish_how_many_floods_and_spots__c), 
+OR(INCLUDES( Finish__c , &apos;Matte UV&apos;), INCLUDES( Finish__c , &apos;Soft Touch Varnish&apos;))),
+True, False)</errorConditionFormula>
+    <errorDisplayField>If_varnish_how_many_floods_and_spots__c</errorDisplayField>
+    <errorMessage>This field is mandatory when Finish field includes &apos;Matte UV&apos; or &apos;Soft Touch Varnish&apos;.</errorMessage>
+</ValidationRule>

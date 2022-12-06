@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OPS_Material_Grade__c</fullName>
+    <externalId>false</externalId>
+    <label>Material Grade - OPS</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>true</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>GMRS</fullName>
+                <default>false</default>
+                <label>GMRS</label>
+            </value>
+            <value>
+                <fullName>GMNS</fullName>
+                <default>false</default>
+                <label>GMNS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

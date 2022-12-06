@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Copy_1_of_New_Task</name>
+        <label>Copy 1 of New Task</label>
+        <locationX>440</locationX>
+        <locationY>288</locationY>
+        <actionName>NewTask</actionName>
+        <actionType>quickAction</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>OwnerId</name>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>contextId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>Subject</name>
+            <value>
+                <stringValue>Lead Follow Up - 14 Days</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>New_Task</name>
+        <label>New Task</label>
+        <locationX>176</locationX>
+        <locationY>288</locationY>
+        <actionName>NewTask</actionName>
+        <actionType>quickAction</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>OwnerId</name>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>contextId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>Subject</name>
+            <value>
+                <stringValue>Lead Follow Up - 7 Days</stringValue>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>56.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Lead Update - Lead Intro 3 {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead Update - Lead Intro 3</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>1</filterLogic>
+        <filters>
+            <field>Move_to_next_stage_Lead_Intro_3__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Lead</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>Lead_Follow_Up_7_Days</name>
+            <connector>
+                <targetReference>New_Task</targetReference>
+            </connector>
+            <label>Lead Follow Up - 7 Days</label>
+            <offsetNumber>7</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>Lead_Follow_Up_14_Days</name>
+            <connector>
+                <targetReference>Copy_1_of_New_Task</targetReference>
+            </connector>
+            <label>Lead Follow Up - 14 Days</label>
+            <offsetNumber>14</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

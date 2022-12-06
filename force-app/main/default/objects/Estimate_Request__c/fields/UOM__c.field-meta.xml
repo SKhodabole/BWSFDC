@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UOM__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If you leave Blank or None then nothing other than sell will appear on Quote letter. 
+If you select Each or K for Thousands then the system will calculate a UOM value which will appear under the Sell price on the Quote letter.</inlineHelpText>
+    <label>Unit of Measure</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Case</fullName>
+                <default>true</default>
+                <label>Case</label>
+            </value>
+            <value>
+                <fullName>Cut Pieces</fullName>
+                <default>false</default>
+                <label>Cut Pieces</label>
+            </value>
+            <value>
+                <fullName>Each</fullName>
+                <default>false</default>
+                <label>Each</label>
+            </value>
+            <value>
+                <fullName>Lot</fullName>
+                <default>false</default>
+                <label>Lot</label>
+            </value>
+            <value>
+                <fullName>Meter</fullName>
+                <default>false</default>
+                <label>Meter</label>
+            </value>
+            <value>
+                <fullName>Pack</fullName>
+                <default>false</default>
+                <label>Pack</label>
+            </value>
+            <value>
+                <fullName>Roll</fullName>
+                <default>false</default>
+                <label>Roll</label>
+            </value>
+            <value>
+                <fullName>Thousand (M) Sheets</fullName>
+                <default>false</default>
+                <label>Thousand (M) Sheets</label>
+            </value>
+            <value>
+                <fullName>Thousand Meters</fullName>
+                <default>false</default>
+                <label>Thousand Meters</label>
+            </value>
+            <value>
+                <fullName>Thousands (M)</fullName>
+                <default>false</default>
+                <label>Thousands (M)</label>
+            </value>
+            <value>
+                <fullName>MSI</fullName>
+                <default>false</default>
+                <label>MSI</label>
+            </value>
+            <value>
+                <fullName>MSM</fullName>
+                <default>false</default>
+                <label>MSM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

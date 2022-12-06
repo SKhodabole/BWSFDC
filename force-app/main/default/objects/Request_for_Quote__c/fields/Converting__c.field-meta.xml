@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Converting__c</fullName>
+    <externalId>false</externalId>
+    <label>Converting</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Stand Up Pouch</fullName>
+                <default>false</default>
+                <label>Stand Up Pouch</label>
+            </value>
+            <value>
+                <fullName>Gusseted Bag</fullName>
+                <default>false</default>
+                <label>Gusseted Bag</label>
+            </value>
+            <value>
+                <fullName>Side Seal</fullName>
+                <default>false</default>
+                <label>Side Seal</label>
+            </value>
+            <value>
+                <fullName>Fin Seal</fullName>
+                <default>false</default>
+                <label>Fin Seal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

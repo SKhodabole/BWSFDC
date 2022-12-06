@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Perf_Size__c</fullName>
+    <externalId>false</externalId>
+    <label>Perf Size</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Std. Vert. 60/40 13 teeth/in.</fullName>
+                <default>false</default>
+                <label>Std. Vert. 60/40 13 teeth/in.</label>
+            </value>
+            <value>
+                <fullName>Vert. 30/60 11 teeth/in.</fullName>
+                <default>false</default>
+                <label>Vert. 30/60 11 teeth/in.</label>
+            </value>
+            <value>
+                <fullName>Vert. 70/30 12 teeth/in.</fullName>
+                <default>false</default>
+                <label>Vert. 70/30 12 teeth/in.</label>
+            </value>
+            <value>
+                <fullName>Vert. 50/50 17 teeth/in.</fullName>
+                <default>false</default>
+                <label>Vert. 50/50 17 teeth/in.</label>
+            </value>
+            <value>
+                <fullName>Vert. 50/50 9 teeth/in.</fullName>
+                <default>false</default>
+                <label>Vert. 50/50 9 teeth/in.</label>
+            </value>
+            <value>
+                <fullName>Vert. 65/35 13 teeth/in.</fullName>
+                <default>false</default>
+                <label>Vert. 65/35 13 teeth/in.</label>
+            </value>
+            <value>
+                <fullName>Horz. 70/30 Cut pcs.</fullName>
+                <default>false</default>
+                <label>Horz. 70/30 Cut pcs.</label>
+            </value>
+            <value>
+                <fullName>Horz. 50/50 Roll Stk</fullName>
+                <default>false</default>
+                <label>Horz. 50/50 Roll Stk</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

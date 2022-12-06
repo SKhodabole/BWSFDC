@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_Description__c</fullName>
+    <defaultValue>&quot;Price&quot;</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>This field will appear on the Quote under the QTY.  You can enter price here or enter another value to accommodate description of options, such as paper weight.</inlineHelpText>
+    <label>Price Description</label>
+    <length>20</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

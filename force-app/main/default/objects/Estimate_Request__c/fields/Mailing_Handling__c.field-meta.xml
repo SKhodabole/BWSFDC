@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mailing_Handling__c</fullName>
+    <externalId>false</externalId>
+    <label>Mailing Handling</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Permit Imprint</fullName>
+                <default>false</default>
+                <label>Permit Imprint</label>
+            </value>
+            <value>
+                <fullName>Live / Pre-Cancelled Stamps</fullName>
+                <default>false</default>
+                <label>Live / Pre-Cancelled Stamps</label>
+            </value>
+            <value>
+                <fullName>Standard Mail</fullName>
+                <default>false</default>
+                <label>Standard Mail</label>
+            </value>
+            <value>
+                <fullName>Nonprofit Standard Mail</fullName>
+                <default>false</default>
+                <label>Nonprofit Standard Mail</label>
+            </value>
+            <value>
+                <fullName>First Class Mail</fullName>
+                <default>false</default>
+                <label>First Class Mail</label>
+            </value>
+            <value>
+                <fullName>Bound Printed Matter</fullName>
+                <default>false</default>
+                <label>Bound Printed Matter</label>
+            </value>
+            <value>
+                <fullName>Periodicals</fullName>
+                <default>false</default>
+                <label>Periodicals</label>
+            </value>
+            <value>
+                <fullName>Job does not mail</fullName>
+                <default>false</default>
+                <label>Job does not mail</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

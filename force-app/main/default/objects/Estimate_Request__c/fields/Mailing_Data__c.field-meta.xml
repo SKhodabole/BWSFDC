@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mailing_Data__c</fullName>
+    <externalId>false</externalId>
+    <label>Mailing Data</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Base Data Service</fullName>
+                <default>false</default>
+                <label>Base Data Service</label>
+            </value>
+            <value>
+                <fullName>NCOA</fullName>
+                <default>false</default>
+                <label>NCOA</label>
+            </value>
+            <value>
+                <fullName>Merge / Perge</fullName>
+                <default>false</default>
+                <label>Merge / Perge</label>
+            </value>
+            <value>
+                <fullName>Tracking / Plant Code</fullName>
+                <default>false</default>
+                <label>Tracking / Plant Code</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

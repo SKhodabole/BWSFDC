@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proposal_Notes__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Data entered in this area will appear on the Quote under the Description fields.  
+This is a rich text field which does carry over to the Quote letter. 
+If the Quote has a lot of blank space - come into this field and press delete several times.</inlineHelpText>
+    <label>Proposal Notes</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Total__c</fullName>
+    <externalId>false</externalId>
+    <formula>Inv_1_Price__c + Inv_2_Price__c + Inv_3_Price__c + Inv_4_Price__c + Inv_5_Price__c + Inv_6_Price__c + Inv_7_Price__c + Inv_8_Price__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sub Total</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

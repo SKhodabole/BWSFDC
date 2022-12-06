@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Bond_Paper__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>50# Offset is equivalent to 20# Bond
+24# Mocr is for Duplex</inlineHelpText>
+    <label>Type of Bond Paper</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>50# Offset</fullName>
+                <default>false</default>
+                <label>50# Offset</label>
+            </value>
+            <value>
+                <fullName>24# Mocr</fullName>
+                <default>false</default>
+                <label>24# Mocr</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

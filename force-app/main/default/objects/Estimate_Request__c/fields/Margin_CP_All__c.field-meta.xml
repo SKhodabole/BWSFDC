@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Margin_CP_All__c</fullName>
+    <description>This is to apply a set % to all QTY&apos;s for Commercial Print Estimating</description>
+    <externalId>false</externalId>
+    <inlineHelpText>A value entered in this field will apply to all QTY&apos;s/Costs to determine the sell price for each QTY.</inlineHelpText>
+    <label>Margin CP-All</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Label_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Label Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TE Band</fullName>
+                <default>false</default>
+                <label>TE Band</label>
+            </value>
+            <value>
+                <fullName>Body Label</fullName>
+                <default>false</default>
+                <label>Body Label</label>
+            </value>
+            <value>
+                <fullName>Promo Combo Pk.</fullName>
+                <default>false</default>
+                <label>Promo Combo Pk.</label>
+            </value>
+            <value>
+                <fullName>Roll-N-Shrink</fullName>
+                <default>false</default>
+                <label>Roll-N-Shrink</label>
+            </value>
+            <value>
+                <fullName>Body w/TE</fullName>
+                <default>false</default>
+                <label>Body w/TE</label>
+            </value>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <label>TBD</label>
+            </value>
+            <value>
+                <fullName>Tubing</fullName>
+                <default>false</default>
+                <label>Tubing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_Forecast_Revised_Required</fullName>
+    <active>true</active>
+    <description>The Reason Forecast Revised is required when revising forecast</description>
+    <errorConditionFormula>not(isblank(Revised_Forecast__c))
+&amp;&amp;
+isblank(Reason_Forecast_Revised__c)</errorConditionFormula>
+    <errorMessage>You must provide a reason for revising the forecast when entering a Revised Forecast Amount</errorMessage>
+</ValidationRule>

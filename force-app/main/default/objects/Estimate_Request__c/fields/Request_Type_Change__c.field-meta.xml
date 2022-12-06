@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Type_Change__c</fullName>
+    <description>This field will be tied to Request Type - so if use selects Revised for as the value in the Request Type field then these values will appear.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What type of Revision is being made from previous RFE/Order?</inlineHelpText>
+    <label>Request Type Change</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Request_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ink ,</fullName>
+                <default>false</default>
+                <label>Ink ,</label>
+            </value>
+            <value>
+                <fullName>Other ,</fullName>
+                <default>false</default>
+                <label>Other ,</label>
+            </value>
+            <value>
+                <fullName>Paper ,</fullName>
+                <default>false</default>
+                <label>Paper ,</label>
+            </value>
+            <value>
+                <fullName>Prep ,</fullName>
+                <default>false</default>
+                <label>Prep ,</label>
+            </value>
+            <value>
+                <fullName>Qty ,</fullName>
+                <default>false</default>
+                <label>Qty ,</label>
+            </value>
+            <value>
+                <fullName>Size ,</fullName>
+                <default>false</default>
+                <label>Size ,</label>
+            </value>
+            <value>
+                <fullName>Page Count ,</fullName>
+                <default>false</default>
+                <label>Page Count ,</label>
+            </value>
+            <value>
+                <fullName>Bindery ,</fullName>
+                <default>false</default>
+                <label>Bindery ,</label>
+            </value>
+            <value>
+                <fullName>Versions ,</fullName>
+                <default>false</default>
+                <label>Versions ,</label>
+            </value>
+            <value>
+                <fullName>Packaging ,</fullName>
+                <default>false</default>
+                <label>Packaging ,</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Revised Request</controllingFieldValue>
+            <valueName>Ink ,</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Revised Request</controllingFieldValue>
+            <valueName>Other ,</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Revised Request</controllingFieldValue>
+            <valueName>Paper ,</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Revised Request</controllingFieldValue>
+            <valueName>Prep ,</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Revised Request</controllingFieldValue>
+            <valueName>Qty ,</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Revised Request</controllingFieldValue>
+            <valueName>Size ,</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Revised Request</controllingFieldValue>
+            <valueName>Page Count ,</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Revised Request</controllingFieldValue>
+            <valueName>Bindery ,</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Revised Request</controllingFieldValue>
+            <valueName>Versions ,</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Revised Request</controllingFieldValue>
+            <valueName>Packaging ,</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

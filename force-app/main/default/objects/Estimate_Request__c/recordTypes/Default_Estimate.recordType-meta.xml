@@ -1,0 +1,1846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Estimate</fullName>
+    <active>true</active>
+    <description>Use Default Estimate access all Estimating Details; Includes Commercial Print and MMT</description>
+    <label>Default Estimate</label>
+    <picklistValues>
+        <picklist>Adhesive_Type__c</picklist>
+        <values>
+            <fullName>All Temperature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freezer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Tack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opaque</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permanent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Removable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repositionable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Application_Method__c</picklist>
+        <values>
+            <fullName>Hand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machine</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Approval_Process_Notification__c</picklist>
+        <values>
+            <fullName>CP 1 Estimating Approval Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CP 2 Estimating Approval Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%26P Estimating Approval Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>L%26P Management Approval Complete</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Board_Type__c</picklist>
+        <values>
+            <fullName>CRB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SBS C1S</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SBS C2S</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Business_Unit__c</picklist>
+        <values>
+            <fullName>Commercial Print</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Envelope</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Packaging</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Container_Color__c</picklist>
+        <values>
+            <fullName>Black</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>White</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Container_Type__c</picklist>
+        <values>
+            <fullName>Can</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glass</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HDPE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LDPE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PVC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Core_Size__c</picklist>
+        <values>
+            <fullName>1%22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Core_Type__c</picklist>
+        <values>
+            <fullName>Fiber</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plastic</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Digital_File_Setup_2__c</picklist>
+        <values>
+            <fullName>Static</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VDP %2F Text</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VDP%2F Covers</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Digital_File_Setup_3__c</picklist>
+        <values>
+            <fullName>Static</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VDP %2F Covers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VDP %2F Text</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Digital_File_Setup_4__c</picklist>
+        <values>
+            <fullName>Static</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VDP %2F Covers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VDP%2F Text</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Digital_File_Setup__c</picklist>
+        <values>
+            <fullName>Static</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VDP %2F Covers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VDP %2F Text</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estimate_Type__c</picklist>
+        <values>
+            <fullName>Existing Customer - Existing Item</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Customer - New Item</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Customer - New Item</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estimating_Approval__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Film_Base__c</picklist>
+        <values>
+            <fullName>Clear Polypropylene</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clear Static Vinyl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clear Vinyl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clear Vinyl High Tack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>White Polypropylene</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>White Polypropylene Removable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>White Static Vinyl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>White Vinyl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>White Vinyl High Tack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yellow Vinyl</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Finance_Approval__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Finishing_Pack__c</picklist>
+        <values>
+            <fullName>Glued</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Label</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security Tag</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Window</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Finishing_Shrink__c</picklist>
+        <values>
+            <fullName>1000 MTR Rolls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>500 MTR Rolls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>750 MTR Rolls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>900 MTR Rolls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pieces</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Freight_Pricing__c</picklist>
+        <values>
+            <fullName>Destination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOB Plant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Freight_additional_to__c</picklist>
+        <values>
+            <fullName>None</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Frieght_Pricing__c</picklist>
+        <values>
+            <fullName>Destination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOB Plant</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Furnished__c</picklist>
+        <values>
+            <fullName>Standing files for Exact reprint</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Imprint_Options__c</picklist>
+        <values>
+            <fullName>Deboss</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emboss</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laser Engraved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pad Print</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Screen Printed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ink_Type__c</picklist>
+        <values>
+            <fullName>CMYK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spot</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Inside_Print_Coating_Type__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Inside_Print_Ink_Type__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Inside_Print__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 1 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 10 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 2 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 3 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 4 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 5 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 6 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 7 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 8 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 9 Color</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Job_Paper_Certification__c</picklist>
+        <values>
+            <fullName>FSC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None%2FBlank</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>PEFC %26 SFI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SFI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SGP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Job_Type__c</picklist>
+        <values>
+            <fullName>Exact Rerun</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rerun with Changes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Label_Category__c</picklist>
+        <values>
+            <fullName>Body Label</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Body w%2FTE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Promo Combo Pk%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roll-N-Shrink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TBD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TE Band</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Label_Product_Type__c</picklist>
+        <values>
+            <fullName>Cut Sheet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Thermal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poly Stock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFID</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thermal Transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ticket</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Label_Shape__c</picklist>
+        <values>
+            <fullName>Circle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Round Corner Rectangle%2FSquare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Square Corner Rectangle%2FSquare</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Label_Type__c</picklist>
+        <values>
+            <fullName>Fanfold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sheeted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lamination__c</picklist>
+        <values>
+            <fullName>Matte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shiny</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soft Touch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Textured</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mailing_Addressing__c</picklist>
+        <values>
+            <fullName>Apply indica with ink jet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ink jet address %2F 1 inch Prt Head</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ink jet message lines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multi-head ink jet %2F 4 inch Prt Head</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Piece will be glued closed in bindery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slim Jim format - 3 tabs x 1%2E5inch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tabbing - 1 tab</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tabbing - 2 tabs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tabbing - 3 tabs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>White tabs</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mailing_Data__c</picklist>
+        <values>
+            <fullName>Base Data Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Merge %2F Perge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NCOA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tracking %2F Plant Code</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mailing_Finishing__c</picklist>
+        <values>
+            <fullName>Hard copy proof</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laser 1%2F0 Black Simplex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laser 1%2F1 Black Duplex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overprint on litho shell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PDF soft proof</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sheet Size Height %28Inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sheet Size Length %28Inches%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>White paper proof</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mailing_Handling__c</picklist>
+        <values>
+            <fullName>Bound Printed Matter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>First Class Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Job does not mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Live %2F Pre-Cancelled Stamps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nonprofit Standard Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Periodicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permit Imprint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard Mail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mailing_Inserting__c</picklist>
+        <values>
+            <fullName>%23 Inserts per package</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Envelope size</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insert into booklet envelope</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insert into catalog envelope</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Match 1 insert to address</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Match 2 insert to address</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nest into another piece</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polybag %2F Polywrap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shrinkwrap</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Manufacturing_Approval__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejceted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Material_Grade_OPS__c</picklist>
+        <values>
+            <fullName>GMNS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GMRS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Material_Grade_PETG__c</picklist>
+        <values>
+            <fullName>K749-22 %28LV%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Material_Grade_PVC_PLA__c</picklist>
+        <values>
+            <fullName>High Impact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Shrink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PLA Film</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SRAE %28BA%29 Standard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SRAE w%2FANTISTAT %28AT%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SRUB %28UB%29 UV</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Material_Thickness__c</picklist>
+        <values>
+            <fullName>1%2E5 MIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E8 MIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E0 MIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E4 MIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E5 MIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E8 MIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E0 MIL</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mfg_Location__c</picklist>
+        <values>
+            <fullName>Charlotte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dominican Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jacksonville</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Toronto</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OPS_Material_Grade__c</picklist>
+        <values>
+            <fullName>GMNS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GMRS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Outside_Print_Coating_Type__c</picklist>
+        <values>
+            <fullName>Gloss Water Based</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Satin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UV</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Outside_Print_Ink_Type__c</picklist>
+        <values>
+            <fullName>Conventional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Metallic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UV</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Outside_Print__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 1 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 10 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 2 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 3 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 4 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 5 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 6 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 7 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 8 Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes - 9 Color</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Overs__c</picklist>
+        <values>
+            <fullName>%28%2B%2F  20%25%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28%2B%2F 0%25%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28%2B%2F 1%25%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28%2B%2F 10%25%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28%2B%2F 2%25%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28%2B%2F 3%25%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28%2B%2F 30%25%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%28%2B%2F 5%25%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Paper_Base__c</picklist>
+        <values>
+            <fullName>Dull Gold Foil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dull Silver Foil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shiny Gold Foil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shiny Silver Foil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>White Gloss</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>White Gloss Removable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>White Litho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>White Litho Removable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Paper_Grade__c</picklist>
+        <values>
+            <fullName>BPA Free - Thermal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bond</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carbonless</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thermal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Perf_Size__c</picklist>
+        <values>
+            <fullName>Horz%2E 50%2F50 Roll Stk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Horz%2E 70%2F30 Cut pcs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Std%2E Vert%2E 60%2F40 13 teeth%2Fin%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vert%2E 30%2F60 11 teeth%2Fin%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vert%2E 50%2F50 17 teeth%2Fin%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vert%2E 50%2F50 9 teeth%2Fin%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vert%2E 65%2F35 13 teeth%2Fin%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vert%2E 70%2F30 12 teeth%2Fin%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Perf_Type__c</picklist>
+        <values>
+            <fullName>Diagonal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Double Zip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Horizontal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Horizontal Vertical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Perf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single Ply</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard Zip</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pinfed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Press_Approval__c</picklist>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>House</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Price_Type__c</picklist>
+        <values>
+            <fullName>Contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cost Plus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GP%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Print_Estimators__c</picklist>
+        <values>
+            <fullName>Albert Fletcher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ali Fakhar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bob Epperson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bruce Moffet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carlos Lechuga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dave Kost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dave McClellan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debbie Cornwell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jenee Nelson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Larry Pawell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Randy Reahard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Richard Fogg</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Printing_Process_Colors__c</picklist>
+        <values>
+            <fullName>Comco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digitals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outside</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rotomec</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Printing_Specification__c</picklist>
+        <values>
+            <fullName>Duplex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Simplex</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Process__c</picklist>
+        <values>
+            <fullName>Content</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital-Black</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital-Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finishing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mailing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sheetfed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Procurement_Approval__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Type__c</picklist>
+        <values>
+            <fullName>Assembly%2FFulfillment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blister Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial Print</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Label</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Envelope</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Folding Carton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nashua Labels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Publisher Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP -  Bid Custom Label - Acclaim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP - Bid Nashua Labels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP - Bid POS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP - Bid Packaging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP - Shrink Sleeve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rx Labels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shrink Sleeve</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Production_Site__c</picklist>
+        <values>
+            <fullName>Amarillo%2C TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Los Angeles%2C CA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portland%2C OR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>San Antonio%2C TX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>St%2E Louis%2C MO</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Proofs__c</picklist>
+        <values>
+            <fullName>Composed Color Proof</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital Blueline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>InSite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loose Color</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PDF</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_Type_Change__c</picklist>
+        <values>
+            <fullName>Ink %2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paper %2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prep %2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qty %2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Size %2C</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_Type__c</picklist>
+        <values>
+            <fullName>New Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revised Request</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rewind__c</picklist>
+        <values>
+            <fullName>%231</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%232</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%233</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%234</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%235</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%236</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%237</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>%238</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Management_Approval__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Returned to Rep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Working</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Terms_of_Sales__c</picklist>
+        <values>
+            <fullName>Net%2C cash%2C 30 days from date of invoice on approved credit%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Top_Coating__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Bond_Paper__c</picklist>
+        <values>
+            <fullName>24%23 Mocr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50%23 Offset</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>UOM__c</picklist>
+        <values>
+            <fullName>Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cut Pieces</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Each</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Roll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thousand %28M%29 Sheets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thousand Meters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thousands %28M%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Unit_Pricing__c</picklist>
+        <values>
+            <fullName>Each</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Unwind_Number__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TBD</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Varnish__c</picklist>
+        <values>
+            <fullName>Matte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shiny</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tactile</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Wind_Type__c</picklist>
+        <values>
+            <fullName>Printed Side In</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Printed Side Out</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Work_Type__c</picklist>
+        <values>
+            <fullName>Addendum for Contract Billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Paper Impact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Large Corp RFP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New%2FExisting Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reprint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revise</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>X3rd_Party_COD__c</picklist>
+        <values>
+            <fullName>UPS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

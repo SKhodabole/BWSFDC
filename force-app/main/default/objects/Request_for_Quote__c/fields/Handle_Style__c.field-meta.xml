@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Handle_Style__c</fullName>
+    <externalId>false</externalId>
+    <label>Handle Style</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>raceway</fullName>
+                <default>false</default>
+                <label>raceway</label>
+            </value>
+            <value>
+                <fullName>2-finger</fullName>
+                <default>false</default>
+                <label>2-finger</label>
+            </value>
+            <value>
+                <fullName>banana</fullName>
+                <default>false</default>
+                <label>banana</label>
+            </value>
+            <value>
+                <fullName>kidney</fullName>
+                <default>false</default>
+                <label>kidney</label>
+            </value>
+            <value>
+                <fullName>custom</fullName>
+                <default>false</default>
+                <label>custom</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Industry__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Industry</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>3PL/Fulfillment</fullName>
+                <default>false</default>
+                <label>3PL/Fulfillment</label>
+            </value>
+            <value>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+                <label>Agriculture</label>
+            </value>
+            <value>
+                <fullName>Airline</fullName>
+                <default>false</default>
+                <label>Airline</label>
+            </value>
+            <value>
+                <fullName>Alcoholic Beverages</fullName>
+                <default>false</default>
+                <label>Alcoholic Beverages</label>
+            </value>
+            <value>
+                <fullName>Animal Care</fullName>
+                <default>false</default>
+                <label>Animal Care</label>
+            </value>
+            <value>
+                <fullName>Apparel/Textiles</fullName>
+                <default>false</default>
+                <label>Apparel/Textiles</label>
+            </value>
+            <value>
+                <fullName>Automotive</fullName>
+                <default>false</default>
+                <label>Automotive</label>
+            </value>
+            <value>
+                <fullName>Banking</fullName>
+                <default>false</default>
+                <label>Banking</label>
+            </value>
+            <value>
+                <fullName>Biotech</fullName>
+                <default>false</default>
+                <label>Biotech</label>
+            </value>
+            <value>
+                <fullName>Commercial Print</fullName>
+                <default>false</default>
+                <label>Commercial Print</label>
+            </value>
+            <value>
+                <fullName>Co-Packers/Decorators</fullName>
+                <default>false</default>
+                <label>Co-Packers/Decorators</label>
+            </value>
+            <value>
+                <fullName>Cruise</fullName>
+                <default>false</default>
+                <label>Cruise</label>
+            </value>
+            <value>
+                <fullName>Department Store/Big Box</fullName>
+                <default>false</default>
+                <label>Department Store/Big Box</label>
+            </value>
+            <value>
+                <fullName>Diversified</fullName>
+                <default>false</default>
+                <label>Diversified</label>
+            </value>
+            <value>
+                <fullName>eCommerce</fullName>
+                <default>false</default>
+                <label>eCommerce</label>
+            </value>
+            <value>
+                <fullName>Energy/Chemicals</fullName>
+                <default>false</default>
+                <label>Energy/Chemicals</label>
+            </value>
+            <value>
+                <fullName>Entertainment Venue</fullName>
+                <default>false</default>
+                <label>Entertainment Venue</label>
+            </value>
+            <value>
+                <fullName>Envelopes</fullName>
+                <default>false</default>
+                <label>Envelopes</label>
+            </value>
+            <value>
+                <fullName>Food/Baking/Confectionary</fullName>
+                <default>false</default>
+                <label>Food/Baking/Confectionary</label>
+            </value>
+            <value>
+                <fullName>Government</fullName>
+                <default>false</default>
+                <label>Government</label>
+            </value>
+            <value>
+                <fullName>Graphics Design</fullName>
+                <default>false</default>
+                <label>Graphics Design</label>
+            </value>
+            <value>
+                <fullName>Hardware</fullName>
+                <default>false</default>
+                <label>Hardware</label>
+            </value>
+            <value>
+                <fullName>Health &amp; Beauty</fullName>
+                <default>false</default>
+                <label>Health &amp; Beauty</label>
+            </value>
+            <value>
+                <fullName>Hotel</fullName>
+                <default>false</default>
+                <label>Hotel</label>
+            </value>
+            <value>
+                <fullName>Household/OTC</fullName>
+                <default>false</default>
+                <label>Household/OTC</label>
+            </value>
+            <value>
+                <fullName>HR and Staffing</fullName>
+                <default>false</default>
+                <label>HR and Staffing</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Labels</fullName>
+                <default>false</default>
+                <label>Labels</label>
+            </value>
+            <value>
+                <fullName>Legal/Consulting</fullName>
+                <default>false</default>
+                <label>Legal/Consulting</label>
+            </value>
+            <value>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+                <label>Manufacturing</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Medical Device</fullName>
+                <default>false</default>
+                <label>Medical Device</label>
+            </value>
+            <value>
+                <fullName>Movie Theater</fullName>
+                <default>false</default>
+                <label>Movie Theater</label>
+            </value>
+            <value>
+                <fullName>Neutraceutical</fullName>
+                <default>false</default>
+                <label>Neutraceutical</label>
+            </value>
+            <value>
+                <fullName>Non-Alcoholic Beverages</fullName>
+                <default>false</default>
+                <label>Non-Alcoholic Beverages</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Organic/Vitamin/Nutrition</fullName>
+                <default>false</default>
+                <label>Organic/Vitamin/Nutrition</label>
+            </value>
+            <value>
+                <fullName>OTC/Consumer</fullName>
+                <default>false</default>
+                <label>OTC/Consumer</label>
+            </value>
+            <value>
+                <fullName>Outsourcing</fullName>
+                <default>false</default>
+                <label>Outsourcing</label>
+            </value>
+            <value>
+                <fullName>Packaging</fullName>
+                <default>false</default>
+                <label>Packaging</label>
+            </value>
+            <value>
+                <fullName>Publishing</fullName>
+                <default>false</default>
+                <label>Publishing</label>
+            </value>
+            <value>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+                <label>Real Estate</label>
+            </value>
+            <value>
+                <fullName>Reseller – Catalog Companies</fullName>
+                <default>false</default>
+                <label>Reseller – Catalog Companies</label>
+            </value>
+            <value>
+                <fullName>Reseller – eCommerce Retailers</fullName>
+                <default>false</default>
+                <label>Reseller – eCommerce Retailers</label>
+            </value>
+            <value>
+                <fullName>Reseller – Independent Printers</fullName>
+                <default>false</default>
+                <label>Reseller – Independent Printers</label>
+            </value>
+            <value>
+                <fullName>Reseller – Other</fullName>
+                <default>false</default>
+                <label>Reseller – Other</label>
+            </value>
+            <value>
+                <fullName>Reseller – Print Brokers</fullName>
+                <default>false</default>
+                <label>Reseller – Print Brokers</label>
+            </value>
+            <value>
+                <fullName>Resellers – Franchise Groups</fullName>
+                <default>false</default>
+                <label>Resellers – Franchise Groups</label>
+            </value>
+            <value>
+                <fullName>Restaurant</fullName>
+                <default>false</default>
+                <label>Restaurant</label>
+            </value>
+            <value>
+                <fullName>Satellite</fullName>
+                <default>false</default>
+                <label>Satellite</label>
+            </value>
+            <value>
+                <fullName>Software</fullName>
+                <default>false</default>
+                <label>Software</label>
+            </value>
+            <value>
+                <fullName>Supermarket/Drug Store</fullName>
+                <default>false</default>
+                <label>Supermarket/Drug Store</label>
+            </value>
+            <value>
+                <fullName>Telecom</fullName>
+                <default>false</default>
+                <label>Telecom</label>
+            </value>
+            <value>
+                <fullName>Tobacco</fullName>
+                <default>false</default>
+                <label>Tobacco</label>
+            </value>
+            <value>
+                <fullName>Transportation/Logistics</fullName>
+                <default>false</default>
+                <label>Transportation/Logistics</label>
+            </value>
+            <value>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+                <label>Utilities</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

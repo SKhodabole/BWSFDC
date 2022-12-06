@@ -1,0 +1,36 @@
+<apex:page standardController="Sales_Data__c" extensions="AddSalesDataController" showheader="false" sidebar="false">
+<apex:sectionHeader title="Sales Data Edit" subtitle="New Sales Data" />
+<apex:messages style="color:red"/>
+<apex:form >
+	<apex:actionFunction action="{!doSave}" name="methodSaveSalesData"/>
+	
+	<!-- 
+	<apex:outputPanel>
+		<apex:pageMessage id="ap" title="Info:" summary="Please make sure saving this Sales Data record will reload the Parent page. All the unsaved changes will be lost. If you have any unsaved changes on the Forecast Page, please consider saving that first and then add the sales data." 
+			severity="Info" strength="2"/>
+	</apex:outputPanel>
+	 -->
+    <apex:pageBlock title="Sales Data Edit">
+        <apex:pageBlockButtons >    
+                <input type="button" class="btn" value="Save" onClick="methodSaveSalesData();"/>
+                <input type="button" class="btn" value="Cancel" onClick="window.close();"/>
+          </apex:pageBlockButtons>
+        <apex:pageBlockSection title="Information" collapsible="false">
+            <apex:inputField value="{!sd.Account__c}"/>
+            <apex:inputField value="{!sd.Plant_Product__c}" />
+            <apex:inputField value="{!sd.Year__c}" />
+            <apex:inputField value="{!sd.Period__c}" />
+           	<apex:inputField value="{!sd.Forecast_Amount__c}" /> 
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:outputPanel rendered="{!NOT(errorLog)}">
+	   <script>
+	   window.opener.location.href = '/apex/EditForecast';
+	   	//window.opener.inputValue();
+		window.close();
+	   </script>
+	</apex:outputPanel>
+   
+</apex:form>
+
+</apex:page>

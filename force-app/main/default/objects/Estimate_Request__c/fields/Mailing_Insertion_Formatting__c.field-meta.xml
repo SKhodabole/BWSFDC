@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mailing_Insertion_Formatting__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(INCLUDES(Mailing_Inserting__c ,&quot;Envelope size&quot;), &quot;Envelope size, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES(Mailing_Inserting__c ,&quot;# Inserts per package&quot;), &quot;# Inserts per package, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES(Mailing_Inserting__c ,&quot;Insert into booklet envelope&quot;), &quot;Insert into booklet envelope, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES(Mailing_Inserting__c ,&quot;Insert into catalog envelope&quot;), &quot;Insert into catalog envelope, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES(Mailing_Inserting__c ,&quot;Nest into another piece&quot;), &quot;Nest into another piece, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES(Mailing_Inserting__c ,&quot;Polybag / Polywrap&quot;), &quot;Polybag / Polywrap, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES(Mailing_Inserting__c ,&quot;Shrinkwrap&quot;), &quot;Shrinkwrap, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES(Mailing_Inserting__c ,&quot;Match 1 insert to address&quot;), &quot;Match 1 insert to address, &quot;,NULL)+&apos;&apos;+
+IF(INCLUDES(Mailing_Inserting__c ,&quot;Match 2 insert to address&quot;), &quot;Match 2 insert to address, &quot;,NULL)+&apos;&apos;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Mailing Inserting Formatting</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Process_Notification__c</fullName>
+    <externalId>false</externalId>
+    <label>Approval Process Notification</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>L&amp;P Estimating Approval Complete</fullName>
+                <default>false</default>
+                <label>L&amp;P Estimating Approval Complete</label>
+            </value>
+            <value>
+                <fullName>L&amp;P Management Approval Complete</fullName>
+                <default>false</default>
+                <label>L&amp;P Management Approval Complete</label>
+            </value>
+            <value>
+                <fullName>CP 1 Estimating Approval Complete</fullName>
+                <default>false</default>
+                <label>CP 1 Estimating Approval Complete</label>
+            </value>
+            <value>
+                <fullName>CP 2 Estimating Approval Complete</fullName>
+                <default>false</default>
+                <label>CP 2 Estimating Approval Complete</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

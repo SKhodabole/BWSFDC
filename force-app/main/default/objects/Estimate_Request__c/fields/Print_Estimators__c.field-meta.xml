@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Print_Estimators__c</fullName>
+    <externalId>false</externalId>
+    <label>Print Estimators</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Production_Site__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Albert Fletcher</fullName>
+                <default>false</default>
+                <label>Albert Fletcher</label>
+            </value>
+            <value>
+                <fullName>Ali Fakhar</fullName>
+                <default>false</default>
+                <label>Ali Fakhar</label>
+            </value>
+            <value>
+                <fullName>Bob Epperson</fullName>
+                <default>false</default>
+                <label>Bob Epperson</label>
+            </value>
+            <value>
+                <fullName>Bruce Moffet</fullName>
+                <default>false</default>
+                <label>Bruce Moffet</label>
+            </value>
+            <value>
+                <fullName>Carlos Lechuga</fullName>
+                <default>false</default>
+                <label>Carlos Lechuga</label>
+            </value>
+            <value>
+                <fullName>Dave Kost</fullName>
+                <default>false</default>
+                <label>Dave Kost</label>
+            </value>
+            <value>
+                <fullName>Dave McClellan</fullName>
+                <default>false</default>
+                <label>Dave McClellan</label>
+            </value>
+            <value>
+                <fullName>Debbie Cornwell</fullName>
+                <default>false</default>
+                <label>Debbie Cornwell</label>
+            </value>
+            <value>
+                <fullName>Jenee Nelson</fullName>
+                <default>false</default>
+                <label>Jenee Nelson</label>
+            </value>
+            <value>
+                <fullName>Jennifer Studebaker</fullName>
+                <default>false</default>
+                <label>Jennifer Studebaker</label>
+            </value>
+            <value>
+                <fullName>Kevin Schmelze</fullName>
+                <default>false</default>
+                <label>Kevin Schmelze</label>
+            </value>
+            <value>
+                <fullName>Larry Pawell</fullName>
+                <default>false</default>
+                <label>Larry Pawell</label>
+            </value>
+            <value>
+                <fullName>Mike Vetz</fullName>
+                <default>false</default>
+                <label>Mike Vetz</label>
+            </value>
+            <value>
+                <fullName>Pam Beck</fullName>
+                <default>false</default>
+                <label>Pam Beck</label>
+            </value>
+            <value>
+                <fullName>Randy Reahard</fullName>
+                <default>false</default>
+                <label>Randy Reahard</label>
+            </value>
+            <value>
+                <fullName>Richard Fogg</fullName>
+                <default>false</default>
+                <label>Richard Fogg</label>
+            </value>
+            <value>
+                <fullName>Steve Gerke</fullName>
+                <default>false</default>
+                <label>Steve Gerke</label>
+            </value>
+            <value>
+                <fullName>Tiffany Rowland</fullName>
+                <default>false</default>
+                <label>Tiffany Rowland</label>
+            </value>
+            <value>
+                <fullName>Tom Gray</fullName>
+                <default>false</default>
+                <label>Tom Gray</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>true</default>
+                <label>None</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Amarillo, TX</controllingFieldValue>
+            <valueName>Albert Fletcher</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Los Angeles, CA</controllingFieldValue>
+            <valueName>Ali Fakhar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Los Angeles, CA</controllingFieldValue>
+            <valueName>Bruce Moffet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Los Angeles, CA</controllingFieldValue>
+            <valueName>Dave McClellan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Los Angeles, CA</controllingFieldValue>
+            <valueName>Jenee Nelson</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Los Angeles, CA</controllingFieldValue>
+            <valueName>Larry Pawell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Portland, OR</controllingFieldValue>
+            <valueName>Dave Kost</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Portland, OR</controllingFieldValue>
+            <valueName>Pam Beck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Portland, OR</controllingFieldValue>
+            <valueName>Richard Fogg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Portland, OR</controllingFieldValue>
+            <valueName>Steve Gerke</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>San Antonio, TX</controllingFieldValue>
+            <valueName>Carlos Lechuga</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seattle, WA</controllingFieldValue>
+            <valueName>Bob Epperson</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seattle, WA</controllingFieldValue>
+            <valueName>Randy Reahard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>St. Louis, MO</controllingFieldValue>
+            <valueName>Kevin Schmelze</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>St. Louis, MO</controllingFieldValue>
+            <valueName>Mike Vetz</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>St. Louis, MO</controllingFieldValue>
+            <valueName>Tiffany Rowland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>St. Louis, MO</controllingFieldValue>
+            <valueName>Tom Gray</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>St. Louis, MO</controllingFieldValue>
+            <valueName>None</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

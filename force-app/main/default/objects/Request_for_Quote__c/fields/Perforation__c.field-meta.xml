@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Perforation__c</fullName>
+    <externalId>false</externalId>
+    <label>Perforation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>T Perf</fullName>
+                <default>false</default>
+                <label>T Perf</label>
+            </value>
+            <value>
+                <fullName>Vertial Perf</fullName>
+                <default>false</default>
+                <label>Vertial Perf</label>
+            </value>
+            <value>
+                <fullName>Dual Vertical Perf</fullName>
+                <default>false</default>
+                <label>Dual Vertical Perf</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proofs__c</fullName>
+    <externalId>false</externalId>
+    <label>Proofs</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Composed Color Proof</fullName>
+                <default>false</default>
+                <label>Composed Color Proof</label>
+            </value>
+            <value>
+                <fullName>Digital Blueline</fullName>
+                <default>false</default>
+                <label>Digital Blueline</label>
+            </value>
+            <value>
+                <fullName>InSite</fullName>
+                <default>false</default>
+                <label>InSite</label>
+            </value>
+            <value>
+                <fullName>Loose Color</fullName>
+                <default>false</default>
+                <label>Loose Color</label>
+            </value>
+            <value>
+                <fullName>PDF</fullName>
+                <default>false</default>
+                <label>PDF</label>
+            </value>
+            <value>
+                <fullName>Press Check</fullName>
+                <default>false</default>
+                <label>Press Check</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>1 set of proofs</fullName>
+                <default>false</default>
+                <label>1 set of proofs</label>
+            </value>
+            <value>
+                <fullName>2 sets of proofs</fullName>
+                <default>false</default>
+                <label>2 sets of proofs</label>
+            </value>
+            <value>
+                <fullName>3 sets of proofs</fullName>
+                <default>false</default>
+                <label>3 sets of proofs</label>
+            </value>
+            <value>
+                <fullName>4 sets of proofs</fullName>
+                <default>false</default>
+                <label>4 sets of proofs</label>
+            </value>
+            <value>
+                <fullName>5 sets of proofs</fullName>
+                <default>false</default>
+                <label>5 sets of proofs</label>
+            </value>
+            <value>
+                <fullName>Ink Drawdown</fullName>
+                <default>false</default>
+                <label>Ink Drawdown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

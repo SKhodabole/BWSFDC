@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Material_Grade_PVC_PLA__c</fullName>
+    <externalId>false</externalId>
+    <label>Material Grade - PVC/PLA</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>SRAE (BA) Standard</fullName>
+                <default>false</default>
+                <label>SRAE (BA) Standard</label>
+            </value>
+            <value>
+                <fullName>SRUB (UB) UV</fullName>
+                <default>false</default>
+                <label>SRUB (UB) UV</label>
+            </value>
+            <value>
+                <fullName>High Impact</fullName>
+                <default>false</default>
+                <label>High Impact</label>
+            </value>
+            <value>
+                <fullName>High Shrink</fullName>
+                <default>false</default>
+                <label>High Shrink</label>
+            </value>
+            <value>
+                <fullName>SRAE w/ANTISTAT (AT)</fullName>
+                <default>false</default>
+                <label>SRAE w/ANTISTAT (AT)</label>
+            </value>
+            <value>
+                <fullName>PLA Film</fullName>
+                <default>false</default>
+                <label>PLA Film</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

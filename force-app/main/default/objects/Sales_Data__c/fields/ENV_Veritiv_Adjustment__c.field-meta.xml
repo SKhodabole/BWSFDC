@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ENV_Veritiv_Adjustment__c</fullName>
+    <description>This field should only be used to record Veritiv adjusted sales results</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field should only be used to record Veritiv adjusted sales results</inlineHelpText>
+    <label>ENV - Veritiv Adjustment</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lip</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR( RecordType.DeveloperName = &apos;Flexible_Packaging_Converted_3_Side_Seal&apos;, RecordType.DeveloperName = &apos;Flexible_Packaging_Converted_Stand_Up_Pouch&apos;), Lip__c , ISBLANK( Lip_Length_inches__c ))</errorConditionFormula>
+    <errorDisplayField>Lip_Length_inches__c</errorDisplayField>
+    <errorMessage>Lip Length is required.</errorMessage>
+</ValidationRule>

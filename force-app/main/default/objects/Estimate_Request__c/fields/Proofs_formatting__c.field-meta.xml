@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proofs_formatting__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(INCLUDES( Proofs__c , &quot;Digital Blueline&quot;), &quot;Digital Blueline,&quot;, NULL)  + &apos; &apos; + 
+IF(INCLUDES( Proofs__c , &quot;Composed Color Proof&quot;), &quot;Composed Color Proof,&quot;, NULL)  + &apos; &apos; + 
+IF(INCLUDES( Proofs__c , &quot;InSite&quot;), &quot;InSite,&quot;, NULL)+ &apos; &apos; +
+IF(INCLUDES( Proofs__c , &quot;Loose Color&quot;), &quot;Loose Color,&quot;, NULL)+ &apos; &apos; +
+IF(INCLUDES( Proofs__c , &quot;PDF&quot;), &quot;PDF,&quot;, NULL)+ &apos; &apos; +
+IF(INCLUDES( Proofs__c , &quot;Press Check&quot;), &quot;Press Check,&quot;, NULL)+ &apos; &apos; +
+IF(INCLUDES( Proofs__c , &quot;Other&quot;), &quot;Other,&quot;, NULL)+ &apos; &apos; +
+IF(INCLUDES( Proofs__c , &quot;1 Set of Proofs&quot;), &quot;1 Set of Proofs,&quot;, NULL)+ &apos; &apos; +
+IF(INCLUDES( Proofs__c , &quot;2 Sets of Proofs&quot;), &quot;2 Sets of Proofs,&quot;, NULL)+ &apos; &apos; +
+IF(INCLUDES( Proofs__c , &quot;3 Sets of Proofs&quot;), &quot;3 Sets of Proofs,&quot;, NULL)+ &apos; &apos; +
+IF(INCLUDES( Proofs__c , &quot;4 Sets of Proofs&quot;), &quot;4 Sets of Proofs,&quot;, NULL)+ &apos; &apos; +
+IF(INCLUDES( Proofs__c , &quot;5 Sets of Proofs&quot;), &quot;5 Sets of Proofs,&quot;, NULL)+ &apos; &apos; +
+IF(INCLUDES( Proofs__c , &quot;Ink Drawdown&quot;), &quot;Ink Drawdown&quot;, NULL)+ &apos; &apos;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Proofs formatting</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
