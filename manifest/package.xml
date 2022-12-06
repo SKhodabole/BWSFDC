@@ -2,24 +2,13 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 <types>
 		<members>*</members>
-		<name>PermissionSet</name>
+		<name>ValidationRule</name>
 	</types>
     <types>
 		<members>*</members>
-		<name>Profile</name>
+		<name>ReportType</name>
 	</types>
-    <types>
-		<members>*</members>
-		<name>Queue</name>
-	</types>
-    <types>
-		<members>*</members>
-		<name>SharingRules</name>
-	</types>
-    <types>
-		<members>*</members>
-		<name>Role</name>
-	</types>
+   
     
     <version>55.0</version>
 </Package>
